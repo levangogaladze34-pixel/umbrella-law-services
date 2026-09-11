@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+</head>
+<body>
+    <!-- heder                        -->
+    <header class="site-header" id="siteHeader">
+      <div class="container-fluid h-100">
+        <div class="d-flex align-items-center justify-content-between h-100 px-3">
+          <div class="header-group header-brand">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none text-white">
+              <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" class="header-logo">
+            </a>
+          </div>
+          <div class="header-group header-nav">
+            <nav>
+              <ul class="navbar-nav flex-row gap-4 mb-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="about.html">
+                    ABOUT
+                    <span class="dropdown-toggle-caret" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
+                    <li><a class="dropdown-item" href="team.html">Team Member</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lawyers.html">LAWYERS</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link active" href="blog.html">
+                    BLOG
+                    <span class="dropdown-toggle-caret" id="blogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="blogDropdown">
+                    <li><a class="dropdown-item" href="blog.html">Blog post</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="cases.html">
+                    CASES
+                    <span class="dropdown-toggle-caret" id="casesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="casesDropdown">
+                    <li><a class="dropdown-item" href="cases.html">Case page</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-group header-actions">
+            <div class="d-flex align-items-center gap-4">
+              <a href="tel:8005671234" class="text-white text-decoration-none d-none d-lg-flex align-items-center gap-1">
+                <i class="bi bi-phone"></i> <span>800.567.1234</span>
+              </a>
+              <a href="cart.html" class="position-relative text-white">
+                <i class="bi bi-cart3 fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 0.6rem;">1</span>
+              </a>
+              <a href="contact.html" class="text-white text-decoration-none fw-bold d-none d-lg-inline">GET IN TOUCH</a>
+              <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+                <i class="bi bi-list" id="hamburgerIcon"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <!-- hamburger menu                  -->
+    <div class="side-panel" id="sidePanel">
+      <div class="side-panel-content">
+        <span class="text-warning fw-bold text-uppercase small">Free Consultation</span>
+        <h2 class="my-3">800.567.1234</h2>
+        <p class="text-white-50 mb-1">info@demolink.org</p>
+        <p class="text-white-50 mb-4">355 S Grand Ave,<br>Los Angeles, CA 90071</p>
+        <a href="contact.html" class="side-panel-link">
+          <i class="bi bi-person-plus"></i> Book an appointment
+        </a>
+        <a href="about.html" class="side-panel-link">
+          <i class="bi bi-bank"></i> Practice Areas
+        </a>
+        <a href="cases.html" class="side-panel-link">
+          <i class="bi bi-balance-scale"></i> Recent Cases
+        </a>
+      </div>
+    </div>
+    <div class="side-panel-overlay" id="sidePanelOverlay"></div>
+    <!-- 1st section სათაური              -->
+
+    <section class="page-title-hero position-relative text-white d-flex align-items-end" style="background: url('./images/books.jpg') no-repeat center center/cover; min-height: 360px;">
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+      <div class="container position-relative py-5">
+        <h1 class="display-4 fw-normal mb-2">Blog</h1>
+      </div>
+    </section>
+
+    <!-- 2ნდ section ბლოგი             -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row g-5">
+
+          <div class="col-lg-8">
+            <article class="mb-5">
+              <div class="mb-4 overflow-hidden">
+                <img src="./images/team-blog.jpg" class="img-fluid w-100" alt="Collective Women's Rights Initiative">
+              </div>
+              <h2 class="fw-normal mb-3" style="font-family: serif; font-size: 2.25rem; color: #2b2b2b;">
+                Collective Women's Rights Initiative
+              </h2>
+              <div class="d-flex align-items-center gap-2 mb-4">
+                <a href="#" class="meta-link text-uppercase">NEWS</a>
+                <span class="text-muted small">|</span>
+                <span class="text-muted small text-uppercase">APRIL 10, 2020</span>
+                <span class="text-muted small">|</span>
+                <a href="#" class="meta-link text-uppercase">0 COMMENTS</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Rსაძიებე ველი -->
+          <div class="col-lg-4">
+            <div class="mb-5">
+              <div class="input-group">
+                <input type="text" class="form-control rounded-0 bg-light border-0 py-2 ps-3" placeholder="Search in blog..." aria-label="Search in blog">
+                <button class="btn btn-light rounded-0 border-0 px-3" type="button">
+                  <i class="bi bi-search text-muted"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- კატეგორიები--->
+            <div class="mb-5">
+              <h5 class="fw-normal mb-3" style="font-family: serif; color: #e1ad01; font-size: 1.35rem;">
+                Categories
+              </h5>
+              <ul class="category-list">
+                <li class="category-item">
+                  <a href="#" class="category-link">
+                    <span>News</span>
+                    <i class="bi bi-arrow-right arrow-icon"></i>
+                  </a>
+                </li>
+                <li class="category-item">
+                  <a href="#" class="category-link">
+                    <span>Legal Support</span>
+                    <i class="bi bi-arrow-right arrow-icon"></i>
+                  </a>
+                </li>
+                <li class="category-item">
+                  <a href="#" class="category-link">
+                    <span>Tips</span>
+                    <i class="bi bi-arrow-right arrow-icon"></i>
+                  </a>
+                </li>
+                <li class="category-item">
+                  <a href="#" class="category-link">
+                    <span>Other</span>
+                    <i class="bi bi-arrow-right arrow-icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- მეილი -->
+            <div class="mb-5">
+              <h5 class="fw-normal mb-3" style="font-family: serif; color: #e1ad01; font-size: 1.35rem;">
+                Newsletter
+              </h5>
+              <form id="newsletterForm" class="needs-validation" novalidate>
+                <div class="mb-3">
+                  <input type="text" id="newsletterEmail" class="form-control rounded-0 bg-light border-0 py-2 ps-3" placeholder="E-mail" required>
+                  <div class="invalid-feedback text-danger small mt-1" id="emailError">
+                    Please enter a valid email containing '@'.
+                  </div>
+                </div>
+                <button type="submit" class="btn w-100 rounded-0 fw-bold text-white text-uppercase py-2" style="background-color: #e1ad01; border: none;">
+                  SUBSCRIBE
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- footer                        -->
+    <footer class="bg-dark text-white pt-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-3">
+            <a href="index.html" class="d-inline-flex align-items-center text-white text-decoration-none mb-3">
+              <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" height="40">
+            </a>
+            <p class="text-white-50 small">
+              We are a team of highly experienced transactional and litigation attorneys from some of the nation's biggest and most elite law firms.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <h5 class="mb-4">Trending Posts</h5>
+
+            <div class="mb-3">
+              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">US Sues California Over Immigration Laws</a>
+              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
+              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
+              <span class="text-warning fw-bold small">NEWS</span>
+            </div>
+            <div class="mb-3">
+              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">Hit-and-Run Crash Should Seek Immediate Counsel</a>
+              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
+              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
+              <span class="text-warning fw-bold small">NEWS</span>
+            </div>
+            <div class="mb-3">
+              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">What Does Marijuana Law Mean for You?</a>
+              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
+              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
+              <span class="text-warning fw-bold small">NEWS</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-4">Quick Links</h5>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled small">
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Admiralty Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Bankruptcy Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Business Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Civil Rights Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Criminal Law</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled small">
+                  <li class="mb-3"><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
+                  <li class="mb-3"><a href="services.html" class="text-white-50 text-decoration-none">Services</a></li>
+                  <li class="mb-3"><a href="lawyers.html" class="text-white-50 text-decoration-none">Lawyers</a></li>
+                  <li class="mb-3"><a href="contact.html" class="text-white-50 text-decoration-none">Contacts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary mt-4">
+        <div class="d-flex flex-wrap justify-content-between py-3 text-white-50 small">
+          <div>Office: <span class="text-white fw-bold">355 S Grand Ave, Los Angeles, CA 90071</span></div>
+          <div>Tel: <span class="text-white fw-bold">800.567.1234</span></div>
+          <div>E-mail: <a href="mailto:info@demolink.org" class="text-white-50">info@demolink.org</a></div>
+        </div>
+        <hr class="border-secondary">
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-4">
+          <p class="text-white-50 mb-0 small">© 2026 Umbrella. All rights reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- მეილი @ -->
+    <script>
+      document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = document.getElementById('newsletterEmail');
+        const emailValue = emailInput.value.trim();
+
+        if (!emailValue.includes('@')) {
+          emailInput.classList.add('is-invalid');
+        } else {
+          emailInput.classList.remove('is-invalid');
+          alert('Subscribed successfully!');
+          emailInput.value = '';
+        }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const siteHeader = document.getElementById("siteHeader");
+        function handleScroll() {
+          if (window.scrollY > 30) {
+            siteHeader.classList.add("scrolled");
+          } else {
+            siteHeader.classList.remove("scrolled");
+          }
+        }
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const sidePanel = document.getElementById('sidePanel');
+        const sidePanelOverlay = document.getElementById('sidePanelOverlay');
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+
+        if (hamburgerBtn && sidePanel && sidePanelOverlay) {
+          hamburgerBtn.addEventListener('click', function() {
+            sidePanel.classList.toggle('active');
+            sidePanelOverlay.classList.toggle('active');
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.toggle('bi-list');
+              hamburgerIcon.classList.toggle('bi-x-lg');
+            }
+          });
+
+          sidePanelOverlay.addEventListener('click', function() {
+            sidePanel.classList.remove('active');
+            sidePanelOverlay.classList.remove('active');
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.add('bi-list');
+              hamburgerIcon.classList.remove('bi-x-lg');
+            }
+          });
+        }
+      });
+    </script>
+
+</body>
+</html>

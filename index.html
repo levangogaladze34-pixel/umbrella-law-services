@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Umbrella - Law Consulting</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  </head>
+  <body>
+<!-- header -->
+    <header class="site-header" id="siteHeader">
+      <div class="container-fluid h-100">
+        <div class="d-flex align-items-center justify-content-between h-100">
+          <div class="header-group header-brand">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none text-white">
+              <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" class="header-logo">
+            </a>
+          </div>
+
+          <!-- menu text -->
+          <div class="header-group header-nav">
+            <nav>
+              <ul class="navbar-nav flex-row gap-4 mb-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="about.html">
+                    ABOUT
+                    <span class="dropdown-toggle-caret" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
+                    <li><a class="dropdown-item" href="team.html">Team Member</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lawyers.html">LAWYERS</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="blog.html">
+                    BLOG
+                    <span class="dropdown-toggle-caret" id="blogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="blogDropdown">
+                    <li><a class="dropdown-item" href="blog.html">Blog post</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="cases.html">
+                    CASES
+                    <span class="dropdown-toggle-caret" id="casesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="casesDropdown">
+                    <li><a class="dropdown-item" href="cases.html">Case page</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-group header-actions">
+            <div class="d-flex align-items-center gap-4">
+              <a href="tel:8005671234" class="text-white text-decoration-none d-none d-lg-flex align-items-center gap-1">
+                <i class="bi bi-phone"></i> <span>800.567.1234</span>
+              </a>
+              <a href="cart.html" class="position-relative text-white">
+                <i class="bi bi-cart3 fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 0.6rem;">1</span>
+              </a>
+              <a href="contact.html" class="text-white text-decoration-none fw-bold d-none d-lg-inline">GET IN TOUCH</a>
+
+              <!-- Hamburger menu -->
+              <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+                <i class="bi bi-list" id="hamburgerIcon"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- dropdown window                    -->
+    <div class="side-panel" id="sidePanel">
+      <div class="side-panel-content">
+        <span class="text-warning fw-bold text-uppercase small">Free Consultation</span>
+        <h2 class="my-3">800.567.1234</h2>
+        <p class="text-white-50 mb-1">info@demolink.org</p>
+        <p class="text-white-50 mb-4">355 S Grand Ave,<br>Los Angeles, CA 90071</p>
+
+        <a href="contact.html" class="side-panel-link">
+          <i class="bi bi-person-plus"></i> Book an appointment
+        </a>
+        <a href="about.html" class="side-panel-link">
+          <i class="bi bi-bank"></i> Practice Areas
+        </a>
+        <a href="cases.html" class="side-panel-link">
+          <i class="bi bi-balance-scale"></i> Recent Cases
+        </a>
+      </div>
+    </div>
+    <div class="side-panel-overlay" id="sidePanelOverlay"></div>
+
+    <!-- 1st section home page with 3 slider -->
+
+<section class="hero-section position-relative">
+  <!-- Carousel Background -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators custom-num-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">01</button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">02</button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">03</button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/hero-img-man.jpg" class="d-block w-100" alt="Professional lawyer">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/hero-img-hand.jpg" class="d-block w-100" alt="Signing a document">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/hero-img-desk.jpg" class="d-block w-100" alt="Working at a desk">
+      </div>
+    </div>
+  </div>
+  <div class="hero-grid-overlay">
+    <div class="hero-grid-box left-box"></div>
+    <div class="hero-grid-box center-box"></div>
+    <div class="hero-grid-box right-box"></div>
+  </div>
+  <div class="hero-line-top"></div>
+  <div class="hero-line-bottom"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Providing the best legal assistance &amp; advice since 1999</div>
+    <h1 class="hero-title">FIND GREAT LEGAL HELP<br>WITHOUT ANY STRESS</h1>
+    <a href="contact.html" class="btn btn-warning btn-lg fw-bold rounded-0 mt-3">GET IN TOUCH</a>
+  </div>
+  <div class="hero-bottom-bar">
+    <div class="address-box">
+      <i class="bi bi-compass fs-3 text-warning"></i>
+      <div>
+        <div class="fw-bold text-white">355 S Grand Ave, Los Angeles, CA 90071</div>
+        <div class="text-white-50 small">Feel free to visit our firm's office at any time.</div>
+      </div>
+    </div>
+
+    <div class="social-box">
+      <a href="about.html" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+      <a href="about.html" class="text-white ms-3"><i class="bi bi-linkedin fs-5"></i></a>
+      <a href="about.html" class="text-white ms-3"><i class="bi bi-twitter fs-5"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 2nd section სათაური      -->
+<section class="quote-banner-section bg-white">
+  <div class="quote-container">
+    <div class="custom-quote-box">
+      <p class="quote-text">
+        We do law differently — with more expertise, less hassle, and tech that helps you hire the perfect lawyer faster than ever.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 3rd secction practice -->
+<section class="practice-section position-relative">
+  <div class="container-fluid p-0">
+    <div class="row g-0 align-items-stretch">
+      
+      <!-- ფოტო -->
+      <div class="col-lg-5 practice-img-col practice-animate">
+        <div class="practice-img-wrapper">
+          <img src="./images/man-in-suit-with-phone.jpg" alt="Lawyer working on laptop">
+        </div>
+      </div>
+
+      <!-- ჩამონათვალი -->
+      <div class="col-lg-7 practice-content-col practice-animate">
+        <div class="practice-content-inner">
+          <h2 class="practice-title">Practice</h2>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <ul class="practice-list">
+                <li><a href="cases.html">Admiralty Law</a></li>
+                <li><a href="cases.html">Bankruptcy Law</a></li>
+                <li><a href="cases.html">Business Law</a></li>
+                <li><a href="cases.html">Civil Rights Law</a></li>
+                <li><a href="cases.html">Criminal Law</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="practice-list">
+                <li><a href="cases.html">Entertainment Law</a></li>
+                <li><a href="cases.html">Employment Law</a></li>
+                <li><a href="cases.html">Family Law</a></li>
+                <li><a href="cases.html">International Law</a></li>
+                <li><a href="cases.html">View More</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- შავი მართკუთხედი -->
+  <div class="dark-rectangle-bar"></div>
+</section>
+
+<!-- 4th section სტატისტიკა -->
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stats-header">
+      <h2 class="stats-title">Statistics &amp; Facts</h2>
+      <div class="stats-gold-line"></div>
+    </div>
+    <div class="row g-4">
+      <!-- Stat 1 -->
+      <div class="col-6 col-lg-3">
+        <div class="stat-box">
+          <div class="stat-number">
+            72% <i class="bi bi-umbrella"></i>
+          </div>
+          <div class="stat-label">CHARGES DROPPED</div>
+        </div>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="col-6 col-lg-3">
+        <div class="stat-box">
+          <div class="stat-number">
+            87% <i class="bi bi-file-earmark-check"></i>
+          </div>
+          <div class="stat-label">CASES WON</div>
+        </div>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="col-6 col-lg-3">
+        <div class="stat-box">
+          <div class="stat-number">
+            25% <i class="bi bi-bookmark"></i>
+          </div>
+          <div class="stat-label">CASES DISMISSED</div>
+        </div>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="col-6 col-lg-3">
+        <div class="stat-box">
+          <div class="stat-number">
+            32% <i class="bi bi-chat-square-quote"></i>
+          </div>
+          <div class="stat-label">COUNTERSUITS FILED</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5th section მინდინარე ქეისები -->
+<section class="case-studies-section py-5">
+  <div class="case-studies-container">
+    <div class="row align-items-start mb-5">
+      <div class="col-md-5">
+        <h2 class="section-title mb-2">Recent Case Studies</h2>
+        <div class="section-gold-line"></div>
+      </div>
+      <div class="col-md-7">
+        <p class="section-description mb-0">
+          From business law to international legal issues, our team has worked on a variety of cases in different fields. Here are the latest ones.
+        </p>
+      </div>
+    </div>
+
+    <!-- ქარდების კარუსელი -->
+    <div class="case-studies-carousel owl-carousel owl-theme">
+      <div class="item">
+        <div class="card case-card">
+          <div class="case-img-wrapper">
+            <img src="./images/1st card.jpg" class="card-img-top" alt="Case Study 1">
+          </div>
+          <div class="card-body p-4">
+            <span class="case-category">CIVIL RIGHTS LAW</span>
+            <h5 class="case-title">Illinois Property Rights: Real Estate Protection</h5>
+            <div class="case-date">NOVEMBER 12, 2020</div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card case-card">
+          <div class="case-img-wrapper">
+            <img src="./images/2nd card.jpg" class="card-img-top" alt="Case Study 2">
+          </div>
+          <div class="card-body p-4">
+            <span class="case-category">ADMIRALTY LAW</span>
+            <h5 class="case-title">Adam Rodriguez &amp; New Wave Expeditions</h5>
+            <div class="case-date">NOVEMBER 12, 2020</div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card case-card">
+          <div class="case-img-wrapper">
+            <img src="./images/3rd card.jpg" class="card-img-top" alt="Case Study 3">
+          </div>
+          <div class="card-body p-4">
+            <span class="case-category">INTERNATIONAL LAW</span>
+            <h5 class="case-title">Quad Oil Corp.: The South China Sea Boundary Dispute</h5>
+            <div class="case-date">NOVEMBER 12, 2020</div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card case-card">
+          <div class="case-img-wrapper">
+            <img src="./images/4th card.jpg" class="card-img-top" alt="Case Study 4">
+          </div>
+          <div class="card-body p-4">
+            <span class="case-category">INTELLECTUAL PROPERTY</span>
+            <h5 class="case-title">Tech Startup Patent Infringement Defense</h5>
+            <div class="case-date">NOVEMBER 12, 2020</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 6th section testimonial -->
+<section class="about-testimonials-section">
+  <div class="testimonials-container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="testimonials-heading">We bring clients a combination of skills &amp; vast experience</h2>
+        <div class="testimonials-gold-line"></div>
+        <p class="testimonials-desc text-muted mb-3">Combining experience in solving disputes and unique skills, we deliver what our clients need.</p>
+        <p class="testimonials-desc text-muted mb-4">To have a better understanding about how we solve legal issues of our clients, read these recently submitted testimonials.</p>
+        <a href="contact.html" class="btn btn-outline-dark rounded-0 px-4 py-2 text-uppercase fw-semibold btn-consultation">FREE CONSULTATION</a>
+      </div>
+      <div class="col-lg-6 testimonials-img-col position-relative">
+        <div class="testimonials-image-wrapper">
+          <img src="./images/two-men-watching-phone.jpg" alt="Team collaborating" class="img-fluid w-100">
+        </div>
+        <!-- კლიენტების კარუსელი  -->
+        <div class="testimonial-overlay-box">
+          <div class="owl-carousel owl-theme testimonial-slider">
+            <div class="item">
+              <p class="testimonial-text">
+                Umbrella represented us in a suit against a large company. We were very satisfied with the result. Our settlement was much better than we expected and was completed in a timely manner.
+              </p>
+              <div class="d-flex align-items-center">
+                <img src="./images/John Smith, Client.jpg" alt="John Doe" class="testimonials-client-avatar me-3">
+                <div>
+                  <h6 class="testimonials-client-name mb-0">John Doe, <span class="testimonials-client-title">Client</span></h6>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="testimonial-text">
+                I received great results when utilizing the legal services of Umbrella. They understood my circumstances and were able to get me the results I wanted.
+              </p>
+              <div class="d-flex align-items-center">
+                <img src="./images/Jane Smith,Client.jpg" alt="Sarah Smith" class="testimonials-client-avatar me-3">
+                <div>
+                  <h6 class="testimonials-client-name mb-0">Sarah Smith, <span class="testimonials-client-title">Client</span></h6>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="testimonial-text">
+                Umbrella Law Firm was great to work with. Their team set expectations from the beginning and answered my many questions throughout the process.
+              </p>
+              <div class="d-flex align-items-center">
+                <img src="./images/Edward Harrison, Client.jpg" alt="Michael Brown" class="testimonials-client-avatar me-3">
+                <div>
+                  <h6 class="testimonials-client-name mb-0">Michael Brown, <span class="testimonials-client-title">Client</span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 7th section ჯგუფის წევრების ქარდები -->
+<section class="team-section">
+  <div class="team-container">
+    <div class="team-header text-center">
+      <h2 class="team-title">Meet Our Team</h2>
+      <div class="team-gold-line"></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+      <div class="col">
+        <div class="card team-card">
+          <div class="team-img-wrapper">
+            <img src="./images/team member-1.jpg" class="card-img" alt="Edward Gray">
+          </div>
+          <div class="team-overlay">
+            <h5 class="team-name">Edward Gray <span class="team-role">- Family Law</span></h5>
+            <p class="team-desc">Edward is the managing partner of Umbrella who specializes in Family Law.</p>
+          </div>
+          <div class="team-hover-arrow">&rarr;</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card team-card">
+          <div class="team-img-wrapper">
+            <img src="./images/team member-2.jpg" class="card-img" alt="Kate Lee">
+          </div>
+          <div class="team-overlay">
+            <h5 class="team-name">Kate Lee <span class="team-role">- Criminal Law</span></h5>
+            <p class="team-desc">Kate is a junior managing partner who has represented 200+ criminal law cases.</p>
+          </div>
+          <div class="team-hover-arrow">&rarr;</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card team-card">
+          <div class="team-img-wrapper">
+            <img src="./images/team member-3.jpg" class="card-img" alt="Harry Smith">
+          </div>
+          <div class="team-overlay">
+            <h5 class="team-name">Harry Smith <span class="team-role">- Admiralty Law</span></h5>
+            <p class="team-desc">Harry is our senior associate with extensive experience in admiralty law.</p>
+          </div>
+          <div class="team-hover-arrow">&rarr;</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card team-card">
+          <div class="team-img-wrapper">
+            <img src="./images/team member-4.jpg" class="card-img" alt="Jane Peters">
+          </div>
+          <div class="team-overlay">
+            <h5 class="team-name">Jane Peters <span class="team-role">- Business Law</span></h5>
+            <p class="team-desc">Jane Peters is an Umbrella associate with professional expertise in business law.</p>
+          </div>
+          <div class="team-hover-arrow">&rarr;</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- 8th სექცია -->
+<section class="legal-issues-section">
+  <div class="container-fluid p-0">
+    <div class="row g-0 align-items-stretch">
+      <div class="col-lg-5">
+        <div class="legal-img-wrapper">
+          <img src="./images/signature.jpg" alt="Signing a document">
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="legal-content-box">
+          <h2 class="legal-title">We help people tackle serious legal issues of all stripes</h2>
+          <div class="legal-gold-line"></div>
+          <p class="legal-desc mb-4">
+            Our award-winning firm is focused on our clients' demands for an exceptional legal service model that provides real value.
+          </p>
+          <div class="row g-4">
+            <div class="col-sm-6 d-flex align-items-start gap-3">
+              <i class="bi bi-book legal-icon"></i>
+              <span class="legal-feature-text">Combination of deep industry knowledge</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-start gap-3">
+              <i class="bi bi-bank legal-icon"></i>
+              <span class="legal-feature-text">Experienced court performance</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-start gap-3">
+              <i class="bi bi-trophy legal-icon"></i>
+              <span class="legal-feature-text">Winners for global legal innovation</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-start gap-3">
+              <i class="bi bi-shield-check legal-icon"></i>
+              <span class="legal-feature-text">Protecting your business interests</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 8th section სარეგისტრაციო ფორმა -->
+<section class="consultation-section">
+  <div class="consultation-container">
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 mb-3 mb-lg-0">
+        <h2 class="consultation-title">Schedule a Free Consultation</h2>
+        <div class="consultation-gold-line"></div>
+      </div>
+      <div class="col-lg-6">
+        <p class="consultation-subtitle">Excellent legal assistance without stress</p>
+      </div>
+    </div>
+    <form class="row g-3" novalidate>
+      <div class="col-md-3">
+        <input type="text" class="form-control consultation-input" placeholder="Your Name*" required>
+      </div>
+      <div class="col-md-3">
+        <input type="email" class="form-control consultation-input" placeholder="Your E-mail*" required>
+      </div>
+      <div class="col-md-3">
+        <input type="tel" class="form-control consultation-input" placeholder="Your Phone*" required>
+      </div>
+      <div class="col-md-3">
+        <button type="submit" class="btn consultation-btn w-100">MAKE AN APPOINTMENT</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+<!-- 10th section ჯილოდები -->
+    <section class="py-5 text-center bg-white">
+      <div class="container">
+        <h2 class="fst-italic mb-5">Our Awards</h2>
+
+        <div class="owl-carousel owl-theme" id="awards-carousel">
+          <div class="item">
+            <img src="./images/statue-award.png" alt="Award 1" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/wwl-award.png" alt="Award 2" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/pen-award.png" alt="Award 3" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/scales-award.png" alt="Award 4" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/victorian-award.png" alt="Award 5" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- 11th section footer -->
+<footer class="site-footer text-center">
+  <div class="container">
+    <a href="index.html" class="d-inline-block mb-4">
+      <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services"">
+    </a>
+    <ul class="footer-nav">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="#practice">PRACTICE</a></li>
+      <li><a href="lawyers.html">OUR EXPERTS</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      <li><a href="cases.html">CASES</a></li>
+    </ul>
+    <hr class="footer-divider">
+    <p class="footer-call-title">Call us 24\7</p>
+    <h2 class="footer-phone">800.567.1234</h2>
+    <div class="footer-socials">
+      <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+      <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="social-btn"><i class="bi bi-twitter"></i></a>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-address">355 S Grand Ave, Los Angeles, CA 90071</p>
+    <p class="footer-copyright">
+      &copy; 2026 Umbrella. All rights reserved. <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- კარუსელი -->
+    <script>
+      $(document).ready(function() {
+  
+        $('.testimonial-slider').owlCarousel({
+          items: 1,
+          loop: true,
+          margin: 0,
+          nav: false,
+          dots: true,
+          autoplay: false,
+          smartSpeed: 500
+        });
+        $('.case-studies-carousel').owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: false,
+          responsive: {
+            0: { items: 1 },
+            600: { items: 2 },
+            1000: { items: 3 }
+          }
+        });
+
+        // ჯილოდების კარუსელი
+        $('#awards-carousel').owlCarousel({
+          loop: true,
+          margin: 30,
+          nav: false,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 4 },
+            1000: { items: 5 }
+          }
+        });
+      });
+
+      // header-ის სქროლი
+      document.addEventListener("DOMContentLoaded", function () {
+        const siteHeader = document.getElementById("siteHeader");
+
+        function handleScroll() {
+          if (window.scrollY > 30) {
+            siteHeader.classList.add("scrolled");
+          } else {
+            siteHeader.classList.remove("scrolled");
+          }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+
+        // Hamburger მენუ
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const sidePanel = document.getElementById('sidePanel');
+        const sidePanelOverlay = document.getElementById('sidePanelOverlay');
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+
+        if (hamburgerBtn && sidePanel && sidePanelOverlay) {
+          hamburgerBtn.addEventListener('click', function() {
+            sidePanel.classList.toggle('active');
+            sidePanelOverlay.classList.toggle('active');
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.toggle('bi-list');
+              hamburgerIcon.classList.toggle('bi-x-lg');
+            }
+          });
+
+          sidePanelOverlay.addEventListener('click', function() {
+            sidePanel.classList.remove('active');
+            sidePanelOverlay.classList.remove('active');
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.add('bi-list');
+              hamburgerIcon.classList.remove('bi-x-lg');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
