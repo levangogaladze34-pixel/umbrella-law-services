@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <!-- header                        -->
+    <header class="site-header" id="siteHeader">
+      <div class="container-fluid h-100">
+        <div class="d-flex align-items-center justify-content-between h-100 px-3">
+          <div class="header-group header-brand">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none text-white">
+              <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" class="header-logo">
+            </a>
+          </div>
+          <div class="header-group header-nav">
+            <nav>
+              <ul class="navbar-nav flex-row gap-4 mb-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="about.html">
+                    ABOUT
+                    <span class="dropdown-toggle-caret" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
+                    <li><a class="dropdown-item" href="team.html">Team Member</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lawyers.html">LAWYERS</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="blog.html">
+                    BLOG
+                    <span class="dropdown-toggle-caret" id="blogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="blogDropdown">
+                    <li><a class="dropdown-item" href="blog.html">Blog post</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="cases.html">
+                    CASES
+                    <span class="dropdown-toggle-caret" id="casesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="casesDropdown">
+                    <li><a class="dropdown-item" href="cases.html">Case page</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-group header-actions">
+            <div class="d-flex align-items-center gap-4">
+              <a href="tel:8005671234" class="text-white text-decoration-none d-none d-lg-flex align-items-center gap-1">
+                <i class="bi bi-phone"></i> <span>800.567.1234</span>
+              </a>
+              <a href="cart.html" class="position-relative text-white">
+                <i class="bi bi-cart3 fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 0.6rem;">1</span>
+              </a>
+              <a href="contact.html" class="text-white text-decoration-none fw-bold d-none d-lg-inline">GET IN TOUCH</a>
+              <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+                <i class="bi bi-list" id="hamburgerIcon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- hamburger menu -->
+    <div class="side-panel" id="sidePanel">
+      <div class="side-panel-content">
+        <span class="text-warning fw-bold text-uppercase small">Free Consultation</span>
+        <h2 class="my-3">800.567.1234</h2>
+        <p class="text-white-50 mb-1">info@demolink.org</p>
+        <p class="text-white-50 mb-4">355 S Grand Ave,<br>Los Angeles, CA 90071</p>
+
+        <a href="contact.html" class="side-panel-link">
+          <i class="bi bi-person-plus"></i> Book an appointment
+        </a>
+        <a href="about.html" class="side-panel-link">
+          <i class="bi bi-bank"></i> Practice Areas
+        </a>
+        <a href="cases.html" class="side-panel-link">
+          <i class="bi bi-balance-scale"></i> Recent Cases
+        </a>
+      </div>
+    </div>
+    <div class="side-panel-overlay" id="sidePanelOverlay"></div>
+    <!-- 1st section სათაური და ფოტო -->
+    <section class="page-title-hero position-relative text-white d-flex align-items-end" style="background: url('./images/books.jpg') no-repeat center center/cover; min-height: 360px;">
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+      <div class="container position-relative py-5">
+        <h1 class="display-4 fw-normal mb-2">Lawyers</h1>
+      </div>
+    </section>
+    <!-- 2nd სection ფოტო და აღწერა= -->
+<section class="py-5 bg-white">
+  <div class="container py-lg-4">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-md-5 col-lg-5 text-center">
+        <img src="./images/lawyer-member.png" class="img-fluid w-100" alt="Professional Lawyer">
+      </div>
+      <div class="col-md-7 col-lg-7 ps-lg-5">
+        <h2 class="fw-normal mb-3" style="font-family: serif; font-size: 2.25rem; color: #2b2b2b;">
+          Professional Team of Lawyers
+        </h2>
+        <p class="text-muted mb-4 leading-relaxed" style="font-size: 0.95rem;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <div class="row g-4 pt-2">
+          <div class="col-sm-6">
+            <i class="bi bi-book text-warning fs-3 mb-2 d-block"></i>
+            <h5 class="fw-normal mb-2" style="font-family: serif; font-size: 1.1rem; color: #2b2b2b;">
+              20+ years' experience
+            </h5>
+            <p class="text-muted small mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <i class="bi bi-trophy text-warning fs-3 mb-2 d-block"></i>
+            <h5 class="fw-normal mb-2" style="font-family: serif; font-size: 1.1rem; color: #2b2b2b;">
+              Professionalism
+            </h5>
+            <p class="text-muted small mb-0">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 3rd section ჯგუფის წევრების ქარდები -->
+<section class="experts-section">
+  <div class="container">
+    <h2 class="experts-title text-center">Meet Our Team</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card expert-card h-100">
+          <div class="expert-img-wrapper">
+            <img src="./images/team member-1.jpg" alt="Kate Lee">
+          </div>
+          <div class="card-body expert-body">
+            <div>
+              <h4 class="expert-name">Kate Lee</h4>
+              <p class="expert-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="expert-footer">
+              <span class="expert-role">JR. MANAGING PARTNER</span>
+              <a href="team.html" class="expert-btn">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card expert-card h-100">
+          <div class="expert-img-wrapper">
+            <img src="./images/team member-2.jpg" alt="Edward Gray">
+          </div>
+          <div class="card-body expert-body">
+            <div>
+              <h4 class="expert-name">Edward Gray</h4>
+              <p class="expert-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="expert-footer">
+              <span class="expert-role">MANAGING PARTNER</span>
+              <a href="team.html" class="expert-btn">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card expert-card h-100">
+          <div class="expert-img-wrapper">
+            <img src="./images/team member-3.jpg" alt="Oliver Barnett">
+          </div>
+          <div class="card-body expert-body">
+            <div>
+              <h4 class="expert-name">Oliver Barnett</h4>
+              <p class="expert-desc">Duis aute irure dolor in reprehenderit in voluptate.</p>
+            </div>
+            <div class="expert-footer">
+              <span class="expert-role">ATTORNEY</span>
+              <a href="team.html" class="expert-btn">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card expert-card h-100">
+          <div class="expert-img-wrapper">
+            <img src="./images/team member-4.jpg" alt="Harry Smith">
+          </div>
+          <div class="card-body expert-body">
+            <div>
+              <h4 class="expert-name">Harry Smith</h4>
+              <p class="expert-desc">Excepteur sint occaecat cupidatat non proident, sunt in.</p>
+            </div>
+            <div class="expert-footer">
+              <span class="expert-role">SR. ASSOCIATE</span>
+              <a href="team.html" class="expert-btn">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card expert-card h-100">
+          <div class="expert-img-wrapper">
+            <img src="./images/team member-5.jpg" alt="Scott Wilkins">
+          </div>
+          <div class="card-body expert-body">
+            <div>
+              <h4 class="expert-name">Scott Wilkins</h4>
+              <p class="expert-desc">Sed ut perspiciatis unde omnis iste natus error sit.</p>
+            </div>
+            <div class="expert-footer">
+              <span class="expert-role">ASSOCIATE</span>
+              <a href="team.html" class="expert-btn">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card expert-card h-100">
+          <div class="expert-img-wrapper">
+            <img src="./images/team member-6.jpg" alt="Jill Adams">
+          </div>
+          <div class="card-body expert-body">
+            <div>
+              <h4 class="expert-name">Jill Adams</h4>
+              <p class="expert-desc">Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+            </div>
+            <div class="expert-footer">
+              <span class="expert-role">ATTORNEY</span>
+              <a href="team.html" class="expert-btn">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-5 text-center bg-white">
+      <div class="container">
+        <h2 class="fst-italic mb-5">Our Awards</h2>
+
+        <div class="owl-carousel owl-theme" id="awards-carousel">
+          <div class="item">
+            <img src="./images/statue-award.png" alt="Award 1" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/wwl-award.png" alt="Award 2" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/pen-award.png" alt="Award 3" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/scales-award.png" alt="Award 4" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+          <div class="item">
+            <img src="./images/victorian-award.png" alt="Award 5" class="img-fluid mx-auto" style="max-height: 100px; width: auto;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer                       -->
+
+    <footer class="bg-dark text-white pt-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-3">
+            <a href="index.html" class="d-inline-flex align-items-center text-white text-decoration-none mb-3">
+              <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" height="40">
+            </a>
+            <p class="text-white-50 small">
+              We are a team of highly experienced transactional and litigation attorneys from some of the nation's biggest and most elite law firms.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <h5 class="mb-4">Trending Posts</h5>
+            <div class="mb-3">
+              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">US Sues California Over Immigration Laws</a>
+              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
+              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
+              <span class="text-warning fw-bold small">NEWS</span>
+            </div>
+            <div class="mb-3">
+              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">Hit-and-Run Crash Should Seek Immediate Counsel</a>
+              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
+              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
+              <span class="text-warning fw-bold small">NEWS</span>
+            </div>
+            <div class="mb-3">
+              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">What Does Marijuana Law Mean for You?</a>
+              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
+              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
+              <span class="text-warning fw-bold small">NEWS</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-4">Quick Links</h5>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled small">
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Admiralty Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Bankruptcy Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Business Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Civil Rights Law</a></li>
+                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Criminal Law</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled small">
+                  <li class="mb-3"><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
+                  <li class="mb-3"><a href="services.html" class="text-white-50 text-decoration-none">Services</a></li>
+                  <li class="mb-3"><a href="lawyers.html" class="text-white-50 text-decoration-none">Lawyers</a></li>
+                  <li class="mb-3"><a href="contact.html" class="text-white-50 text-decoration-none">Contacts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary mt-4">
+        <div class="d-flex flex-wrap justify-content-between py-3 text-white-50 small">
+          <div>Office: <span class="text-white fw-bold">355 S Grand Ave, Los Angeles, CA 90071</span></div>
+          <div>Tel: <span class="text-white fw-bold">800.567.1234</span></div>
+          <div>E-mail: <a href="mailto:info@demolink.org" class="text-white-50">info@demolink.org</a></div>
+        </div>
+        <hr class="border-secondary">
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-4">
+          <p class="text-white-50 mb-0 small">© 2026 Umbrella. All rights reserved.</p>
+
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-youtube fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('#awards-carousel').owlCarousel({
+          loop: true,
+          margin: 30,
+          nav: false,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 4 },
+            1000: { items: 5 }
+          }
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const siteHeader = document.getElementById("siteHeader");
+
+        function handleScroll() {
+          if (window.scrollY > 30) {
+            siteHeader.classList.add("scrolled");
+          } else {
+            siteHeader.classList.remove("scrolled");
+          }
+        }
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const sidePanel = document.getElementById('sidePanel');
+        const sidePanelOverlay = document.getElementById('sidePanelOverlay');
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+
+        if (hamburgerBtn && sidePanel && sidePanelOverlay) {
+          hamburgerBtn.addEventListener('click', function() {
+            sidePanel.classList.toggle('active');
+            sidePanelOverlay.classList.toggle('active');
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.toggle('bi-list');
+              hamburgerIcon.classList.toggle('bi-x-lg');
+            }
+          });
+          sidePanelOverlay.addEventListener('click', function() {
+            sidePanel.classList.remove('active');
+            sidePanelOverlay.classList.remove('active');
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.add('bi-list');
+              hamburgerIcon.classList.remove('bi-x-lg');
+            }
+          });
+        }
+      });
+    </script>
+</body>
+</html>
