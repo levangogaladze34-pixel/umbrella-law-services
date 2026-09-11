@@ -1,0 +1,725 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.btn-warning {
+  @include custom-button($gold-color, $white, $gold-hover);
+}
+
+.quote-banner-section {
+  padding: 90px 0 60px 0;
+  background-color: $white;
+
+  .quote-container {
+    padding-left: 240px; /* Snaps text to 1st vertical grid line */
+    padding-right: 80px;
+    max-width: 1250px;
+  }
+
+  .custom-quote-box {
+    border-left: 3px solid $gold-color;
+    padding-left: 35px;
+  }
+
+  .quote-text {
+    font-family: serif;
+    font-size: 2.2rem;
+    line-height: 1.4;
+    color: #2b2b2b;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  @media (max-width: 991.98px) {
+    .quote-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+// მართკუთხედი სექციებს შორის
+.practice-section {
+  background-color: $white;
+  position: relative;
+
+ 
+  .practice-img-col {
+    padding: 0;
+  }
+
+  .practice-img-wrapper {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  
+  .practice-content-col {
+    background-color: #f9fbfd; 
+    padding: 60px 60px 60px 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  .practice-content-inner {
+    max-width: 650px;
+    width: 100%;
+  }
+  .practice-title {
+    font-family: serif;
+    font-size: 2.5rem;
+    color: #222222;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+
+  .practice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        display: inline-block;
+        font-family: serif;
+        font-size: 1.1rem;
+        color: #2b2b2b;    
+        text-decoration: none;
+        position: relative;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+       
+        &::before {
+          content: "\2192"; 
+          position: absolute;
+          left: -20px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $gold-color;
+          font-family: sans-serif;
+          font-size: 0.95rem;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+    
+        &:hover {
+          transform: translateX(20px);
+          color: #2b2b2b;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .dark-rectangle-bar {
+    width: 500px;
+    height: 65px;
+    background-color: #222222;
+  }
+}
+
+// ანიმაციები
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.practice-animate {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+// სტატისტიკა
+.stats-section {
+  background-color: #222222; 
+  padding: 100px 0 140px 0;   
+  color: $white;
+
+  .stats-container {
+    padding-left: 240px; 
+    padding-right: 80px;
+    max-width: 1350px;
+  }
+  .stats-header {
+    margin-bottom: 45px;
+    .stats-title {
+      font-family: serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: $white;
+      margin-bottom: 15px;
+    }
+    .stats-gold-line {
+      width: 50px;
+      height: 2px;
+      background-color: $gold-color;
+    }
+  }
+
+  
+  .stat-box {
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+
+    .stat-number {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: serif;
+      font-size: 3.25rem;
+      font-weight: 400;
+      line-height: 1;
+      color: $white;
+      margin-bottom: 10px;
+
+      i {
+        font-size: 1.5rem;
+        color: $gold-color; 
+      }
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+    }
+  }
+
+
+  @media (max-width: 991.98px) {
+    .stats-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+// ქეისები
+.case-studies-section {
+  background-color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  .case-studies-container {
+    padding-left: 240px; 
+    padding-right: 80px;
+    max-width: 1400px;
+  }
+
+  .section-title {
+    font-family: serif;
+    font-size: 2.35rem;
+    color: #2b2b2b;
+    font-weight: 400;
+  }
+
+  .section-gold-line {
+    width: 50px;
+    height: 2px;
+    background-color: $gold-color;
+    margin-top: 10px;
+  }
+
+  .section-description {
+    color: #666666;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 991.98px) {
+    .case-studies-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+.case-card {
+  border: none;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.14);
+  }
+  .case-img-wrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .case-category {
+    display: inline-block;
+    background-color: #fff8e7; 
+    color: #d49928;           
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    margin-bottom: 16px;
+  }
+  .case-title {
+    font-family: serif;
+    font-size: 1.25rem;
+    color: #2b2b2b;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 25px;
+    min-height: 70px; 
+  }
+  .case-date {
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    color: #999999;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+// გამოცდილება
+.about-testimonials-section {
+  background-color: #f1f5fa!important;
+  padding: 100px 0 140px 0;
+
+  .testimonials-container {
+    padding-left: 240px;
+    padding-right: 80px;
+    max-width: 1400px;
+  }
+
+  .testimonials-heading {
+    font-family: serif;
+    font-size: 2.35rem;
+    color: #2b2b2b;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+
+  .testimonials-gold-line {
+    width: 45px;
+    height: 2px;
+    background-color: $gold-color;
+    margin: 20px 0 25px 0;
+  }
+
+  .testimonials-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666666 !important;
+  }
+
+  .btn-consultation {
+    border-color: #2b2b2b;
+    color: #2b2b2b;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: #2b2b2b;
+      color: $white;
+    }
+  }
+
+
+  .testimonials-image-wrapper {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+ 
+  .testimonial-overlay-box {
+    position: absolute;
+    bottom: -40px;
+    left: -70px;
+    width: 88%;
+    background-color: #222222;
+    padding: 35px 40px;
+    border-left: 3px solid $gold-color; /* Left gold border line */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+
+    .testimonial-text {
+      font-family: serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 25px;
+    }
+
+    .testimonials-client-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonials-client-name {
+      font-family: serif;
+      font-size: 1.05rem;
+      color: $white;
+      font-weight: 400;
+
+      .testimonials-client-title {
+        font-family: sans-serif;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
+      }
+    }
+
+   
+    .owl-dots {
+      text-align: right;
+      margin-top: -20px;
+
+      .owl-dot {
+        span {
+          width: 8px;
+          height: 8px;
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          transition: all 0.3s ease;
+        }
+
+        &.active span,
+        &:hover span {
+          background: $gold-color;
+          border-color: $gold-color;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 991.98px) {
+    .testimonials-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .testimonial-overlay-box {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+// გუნდის წევრები
+.team-section {
+  background-color: #222222;
+  padding: 110px 0 150px 0;
+  color: $white;
+  .team-container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1300px; 
+}
+  .team-header {
+    margin-bottom: 50px;
+
+    .team-title {
+      font-family: serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: $white;
+      margin: 0;
+    }
+    .team-gold-line {
+      width: 50px;
+      height: 2px;
+      background-color: $gold-color;
+      margin: 15px auto 0 auto;
+    }
+  }
+  .team-card {
+    border: none;
+    border-radius: 0;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.35s ease, 
+                z-index 0s;
+
+    .team-img-wrapper {
+      width: 100%;
+      height: 440px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+
+    .team-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 20px 20px 20px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      z-index: 2;
+    }
+    .team-name {
+      font-family: serif;
+      font-size: 1.15rem;
+      color: $white;
+      font-weight: 400;
+      margin-bottom: 4px;
+      .team-role {
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .team-desc {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+  
+    .team-hover-arrow {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      background-color: $white;
+      color: $gold-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    &:hover {
+      transform: scale(1.06);
+      z-index: 10;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+
+      .team-hover-arrow {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .team-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+
+.legal-issues-section {
+  background-color: #f0f2f5 !important; 
+  padding: 100px 0 120px 0;             
+
+
+  .legal-img-wrapper {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+ 
+  .legal-content-box {
+    background-color: #ffffff;
+    padding: 70px 100px 70px 80px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .legal-title {
+    font-family: serif;
+    font-size: 2.35rem;
+    color: #2b2b2b;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .legal-gold-line {
+    width: 45px;
+    height: 2px;
+    background-color: $gold-color;
+    margin: 20px 0 25px 0;
+  }
+
+  .legal-desc {
+    color: #666666;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .legal-icon {
+    color: $gold-color;
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .legal-feature-text {
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.4;
+  }
+
+ 
+  @media (max-width: 991.98px) {
+    .legal-content-box {
+      padding: 40px 25px;
+    }
+  }
+}
+
+
+
+.consultation-section {
+  background-color: #333333; 
+  padding: 100px 0 120px 0;  
+  color: $white;
+
+  .consultation-container {
+    padding-left: 240px; 
+    padding-right: 80px;
+    max-width: 1500px;
+  }
+
+  .consultation-title {
+    font-family: serif;
+    font-size: 2.35rem;
+    font-weight: 400;
+    color: $white;
+    margin-bottom: 12px;
+  }
+
+  .consultation-gold-line {
+    width: 50px;
+    height: 2px;
+    background-color: #f3ca64;
+  }
+
+  .consultation-subtitle {
+    font-family: serif;
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 300;
+    margin: 0;
+  }
+
+  
+  .consultation-input {
+    height: 56px;
+    background-color: #f9fbfd; 
+    border: none;
+    border-radius: 0;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    color: #333333;
+
+    &::placeholder {
+      color: #777777;
+      font-size: 0.88rem;
+    }
+
+    &:focus {
+      background-color: #ffffff;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  
+  .consultation-btn {
+    height: 56px;
+    background-color: #f3ca64; 
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e2b952;
+      color: #ffffff;
+    }
+  }
+
+  
+  @media (max-width: 991.98px) {
+    .consultation-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+@mixin custom-button($bg: $gold-color, $color: $white, $hover-bg: $gold-hover) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  border-radius: $border-radius-base;
+  padding: 12px 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-bg;
+    color: $white;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 575.98px) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: 991.98px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) { @content; }
+}

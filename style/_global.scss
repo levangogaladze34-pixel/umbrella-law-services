@@ -1,0 +1,51 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body {
+  font-family: $font-sans;
+  color: $text-dark;
+  background-color: $white;
+  overflow-x: hidden; // ჰორიზონტალური სქროლის
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.practice-link {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e9ecef;
+  color: $text-dark;
+  position: relative;
+  
+  &:hover {
+    padding-left: 18px;
+    color: $gold-color !important;
+    
+    &::before {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  &::before {
+    content: "→";
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    color: $gold-color;
+    transition: $transition-base;
+  }
+}
