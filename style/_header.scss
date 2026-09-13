@@ -1,6 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
-
+// header size and to change color after scrolling
 .site-header {
   position: fixed;
   top: 0;
@@ -10,7 +10,7 @@
   background: transparent;
   z-index: 1000;
   transition: $transition-base;
-
+  transition: background-color 0.3s ease, padding 0.3s ease;
   &.scrolled {
     height: $header-height-sm;
     background: rgba(30, 30, 30, 0.95);
@@ -22,7 +22,7 @@
     padding: 0;
   }
 }
-
+// logo
 .header-logo {
   height: 38px;
   transition: $transition-base;
@@ -31,40 +31,33 @@
     height: 32px;
   }
 }
-.site-header {
-  .container-fluid > .d-flex {
-    height: 100%;
-    align-items: stretch !important;
-  }
-}
-
+// ჰედერის საერთო ჯგუფი სამივე ნაწილისთვის
 .header-group {
   height: 100%;
   display: flex;
   align-items: center;
-  border-radius: 0 !important; 
   background: transparent;   
   transition: background 0.25s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.1);
   }
 }
-
+// ლოგოს ჰედერის ნაწილი
 .header-brand {
   width: 240px;
   padding-left: 60px;
   padding-right: 20px;
-  justify-content: flex-start;
+  // justify-content: flex-start;
   border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
-
+// ჰედერის ცენტრალური ნაწილი, მენიუ
 .header-nav {
   flex: 1;
   justify-content: center;
   padding: 0 20px;
 }
-
+// hamburger menu and number
 .header-actions {
   width: 240px;
   padding-left: 20px;
@@ -95,7 +88,6 @@
 }
 .dropdown-toggle-caret {
   margin-left: 4px;
-  cursor: pointer;
   font-size: 0.7rem;
 }
 
@@ -123,9 +115,9 @@
     border-radius: 4px;
     padding: 10px 0;
 
-    &.show {
-      display: block;
-    }
+    // &.show {
+    //   display: block;
+    // }
 
     .dropdown-item {
       color: #333333;
@@ -163,61 +155,61 @@
     color: $gold-color;
   }
 }
-.side-panel {
-  position: fixed;
-  top: 0;
-  right: -420px;
-  width: 380px;
-  max-width: 85vw;
-  height: 100%;
-  background: rgba(30, 30, 30, 0.98);
-  color: $white;
-  z-index: 1100;
-  transition: right 0.4s ease;
-  padding-top: 100px;
+// .side-panel {
+//   position: fixed;
+//   top: 0;
+//   right: -420px;
+//   width: 380px;
+//   max-width: 85vw;
+//   height: 100%;
+//   background: rgba(30, 30, 30, 0.98);
+//   color: $white;
+//   z-index: 1100;
+//   transition: right 0.4s ease;
+//   padding-top: 100px;
 
-  &.active {
-    right: 0;
-  }
-}
+//   &.active {
+//     right: 0;
+//   }
+// }
 
-.side-panel-content {
-  padding: 30px 40px;
-}
+// .side-panel-content {
+//   padding: 30px 40px;
+// }
 
-.side-panel-link {
-  display: block;
-  color: $white;
-  text-decoration: none;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  transition: color 0.25s ease, padding-left 0.25s ease;
+// .side-panel-link {
+//   display: block;
+//   color: $white;
+//   text-decoration: none;
+//   padding: 16px 0;
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+//   transition: color 0.25s ease, padding-left 0.25s ease;
 
-  i {
-    color: $gold-color;
-    margin-right: 10px;
-  }
+//   i {
+//     color: $gold-color;
+//     margin-right: 10px;
+//   }
 
-  &:hover {
-    color: $gold-color;
-    padding-left: 8px;
-  }
-}
+//   &:hover {
+//     color: $gold-color;
+//     padding-left: 8px;
+//   }
+// }
 
-.side-panel-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1050;
-  opacity: 0;
-  visibility: hidden;
-  transition: $transition-base;
+// .side-panel-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.6);
+//   z-index: 1050;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: $transition-base;
 
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
-}
+//   &.active {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }

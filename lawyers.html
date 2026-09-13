@@ -11,15 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
-    <!-- header                        -->
-    <header class="site-header" id="siteHeader">
+    <!-- header -->
+    <header class="site-header" id="siteHeader" >
       <div class="container-fluid h-100">
-        <div class="d-flex align-items-center justify-content-between h-100 px-3">
+        <div class="d-flex align-items-center justify-content-between h-100">
+          <!-- 1. ლოგო, მარცხენა მხარეს  -->
           <div class="header-group header-brand">
             <a href="index.html" class="d-flex align-items-center text-decoration-none text-white">
               <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" class="header-logo">
             </a>
           </div>
+          <!-- 2. ცენტეალური მენიუ -->
           <div class="header-group header-nav">
             <nav>
               <ul class="navbar-nav flex-row gap-4 mb-0">
@@ -65,6 +67,7 @@
               </ul>
             </nav>
           </div>
+          <!-- 3. ჰამბურგერ მენიუ -->
           <div class="header-group header-actions">
             <div class="d-flex align-items-center gap-4">
               <a href="tel:8005671234" class="text-white text-decoration-none d-none d-lg-flex align-items-center gap-1">
@@ -75,34 +78,14 @@
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 0.6rem;">1</span>
               </a>
               <a href="contact.html" class="text-white text-decoration-none fw-bold d-none d-lg-inline">GET IN TOUCH</a>
-              <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
-                <i class="bi bi-list" id="hamburgerIcon"></i>
+              <button class="hamburger-btn" aria-label="Toggle menu">
+                <i class="bi bi-list"></i>
               </button>
             </div>
           </div>
         </div>
       </div>
     </header>
-<!-- hamburger menu -->
-    <div class="side-panel" id="sidePanel">
-      <div class="side-panel-content">
-        <span class="text-warning fw-bold text-uppercase small">Free Consultation</span>
-        <h2 class="my-3">800.567.1234</h2>
-        <p class="text-white-50 mb-1">info@demolink.org</p>
-        <p class="text-white-50 mb-4">355 S Grand Ave,<br>Los Angeles, CA 90071</p>
-
-        <a href="contact.html" class="side-panel-link">
-          <i class="bi bi-person-plus"></i> Book an appointment
-        </a>
-        <a href="about.html" class="side-panel-link">
-          <i class="bi bi-bank"></i> Practice Areas
-        </a>
-        <a href="cases.html" class="side-panel-link">
-          <i class="bi bi-balance-scale"></i> Recent Cases
-        </a>
-      </div>
-    </div>
-    <div class="side-panel-overlay" id="sidePanelOverlay"></div>
     <!-- 1st section სათაური და ფოტო -->
     <section class="page-title-hero position-relative text-white d-flex align-items-end" style="background: url('./images/books.jpg') no-repeat center center/cover; min-height: 360px;">
       <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>

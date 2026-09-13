@@ -1,11 +1,13 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-
-// დიდი ეკრანი
+// desktop (1440px+)
 @media (min-width: 1440px) {
   .hero-container,
   .quote-container,
+  .stats-container,
+  .case-studies-container,
+  .testimonials-container,
   .team-container,
   .legal-issues-container,
   .consultation-container,
@@ -16,10 +18,13 @@
   }
 }
 
-// ლეპტოპი
+// 2. Laptops & Desktops (1200px - 1439.98px)
 @media (min-width: 1200px) and (max-width: 1439.98px) {
   .hero-container,
   .quote-container,
+  .stats-container,
+  .case-studies-container,
+  .testimonials-container,
   .team-container,
   .legal-issues-container,
   .consultation-container,
@@ -33,7 +38,7 @@
   }
 }
 
-// ტაბლეტი
+// 3. Tablets (768px - 1199.98px)
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .site-header {
     height: 80px;
@@ -53,6 +58,9 @@
 
   .hero-container,
   .quote-container,
+  .stats-container,
+  .case-studies-container,
+  .testimonials-container,
   .team-container,
   .legal-issues-container,
   .consultation-container,
@@ -71,7 +79,7 @@
   }
 }
 
-// ტელეფონი
+// 4. Mobile Devices (< 767.98px)
 @media (max-width: 767.98px) {
   .site-header {
     height: 70px;
@@ -90,9 +98,11 @@
     line-height: 1.3;
   }
 
-  /* Minimal edge padding for phones */
   .hero-container,
   .quote-container,
+  .stats-container,
+  .case-studies-container,
+  .testimonials-container,
   .team-container,
   .legal-issues-container,
   .consultation-container,
@@ -109,5 +119,17 @@
 
   .display-4 {
     font-size: 1.8rem;
+  }
+
+  .about-testimonials-section .testimonial-overlay-box {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .legal-content-box {
+    padding: 40px 25px;
   }
 }

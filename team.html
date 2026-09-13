@@ -1,492 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Member - Umbrella Law Services</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Member - Umbrella Law Services</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-    <!-- header                        -->
-    <header class="site-header" id="siteHeader">
-      <div class="container-fluid h-100">
-        <div class="d-flex align-items-center justify-content-between h-100 px-3">
-          <div class="header-group header-brand">
-            <a href="index.html" class="d-flex align-items-center text-decoration-none text-white">
-              <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" class="header-logo">
-            </a>
-          </div>
-          <div class="header-group header-nav">
-            <nav>
-              <ul class="navbar-nav flex-row gap-4 mb-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link active" href="about.html">
-                    ABOUT
-                    <span class="dropdown-toggle-caret" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="bi bi-caret-down-fill"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
-                    <li><a class="dropdown-item" href="team.html">Team Member</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="lawyers.html">LAWYERS</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="blog.html">
-                    BLOG
-                    <span class="dropdown-toggle-caret" id="blogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="bi bi-caret-down-fill"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="blogDropdown">
-                    <li><a class="dropdown-item" href="blog.html">Blog post</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="cases.html">
-                    CASES
-                    <span class="dropdown-toggle-caret" id="casesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="bi bi-caret-down-fill"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu custom-dropdown" aria-labelledby="casesDropdown">
-                    <li><a class="dropdown-item" href="cases.html">Case page</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">CONTACT US</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header-group header-actions">
-            <div class="d-flex align-items-center gap-4">
-              <a href="tel:8005671234" class="text-white text-decoration-none d-none d-lg-flex align-items-center gap-1">
-                <i class="bi bi-phone"></i> <span>800.567.1234</span>
-              </a>
-              <a href="cart.html" class="position-relative text-white">
-                <i class="bi bi-cart3 fs-5"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 0.6rem;">1</span>
-              </a>
-              <a href="contact.html" class="text-white text-decoration-none fw-bold d-none d-lg-inline">GET IN TOUCH</a>
 
-              <!-- Hamburger menu -->
-              <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
-                <i class="bi bi-list" id="hamburgerIcon"></i>
-              </button>
-            </div>
-          </div>
-
+  <!-- 1. Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-fluid h-100">
+      <div class="d-flex align-items-center justify-content-between h-100">
+        
+        <div class="header-group header-brand">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none text-white">
+            <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" class="header-logo">
+          </a>
         </div>
-      </div>
-    </header>
-    <div class="side-panel" id="sidePanel">
-      <div class="side-panel-content">
-        <span class="text-warning fw-bold text-uppercase small">Free Consultation</span>
-        <h2 class="my-3">800.567.1234</h2>
-        <p class="text-white-50 mb-1">info@demolink.org</p>
-        <p class="text-white-50 mb-4">355 S Grand Ave,<br>Los Angeles, CA 90071</p>
 
-        <a href="contact.html" class="side-panel-link">
-          <i class="bi bi-person-plus"></i> Book an appointment
-        </a>
-        <a href="about.html" class="side-panel-link">
-          <i class="bi bi-bank"></i> Practice Areas
-        </a>
-        <a href="cases.html" class="side-panel-link">
-          <i class="bi bi-balance-scale"></i> Recent Cases
-        </a>
+        <div class="header-group header-nav">
+          <nav>
+            <ul class="navbar-nav flex-row gap-4 mb-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="about.html">
+                  ABOUT
+                  <span class="dropdown-toggle-caret" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-caret-down-fill"></i>
+                  </span>
+                </a>
+                <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
+                  <li><a class="dropdown-item" href="team.html">Team Member</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lawyers.html">LAWYERS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="blog.html">
+                  BLOG
+                  <span class="dropdown-toggle-caret" id="blogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-caret-down-fill"></i>
+                  </span>
+                </a>
+                <ul class="dropdown-menu custom-dropdown" aria-labelledby="blogDropdown">
+                  <li><a class="dropdown-item" href="blog.html">Blog post</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="cases.html">
+                  CASES
+                  <span class="dropdown-toggle-caret" id="casesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-caret-down-fill"></i>
+                  </span>
+                </a>
+                <ul class="dropdown-menu custom-dropdown" aria-labelledby="casesDropdown">
+                  <li><a class="dropdown-item" href="cases.html">Case page</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT US</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-group header-actions">
+          <div class="d-flex align-items-center gap-4">
+            <a href="tel:8005671234" class="text-white text-decoration-none d-none d-lg-flex align-items-center gap-1">
+              <i class="bi bi-phone"></i> <span>800.567.1234</span>
+            </a>
+            <a href="cart.html" class="position-relative text-white">
+              <i class="bi bi-cart3 fs-5"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">1</span>
+            </a>
+            <a href="contact.html" class="text-white text-decoration-none fw-bold d-none d-lg-inline">GET IN TOUCH</a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+              <i class="bi bi-list" id="hamburgerIcon"></i>
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
-    <div class="side-panel-overlay" id="sidePanelOverlay"></div>
+  </header>
 
-    <!-- 1st section სათაური            -->
+  <!-- 1st Section -->
+  <section class="page-title-hero">
+    <img src="./images/books.jpg" alt="Team Member Background" class="page-title-bg position-absolute top-0 start-0 w-100 h-100">
+    <div class="page-title-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="container page-title-content">
+      <h1 class="page-title-text mb-2">Team Member</h1>
+      <p class="page-title-subtext mb-0">Detailed information about one of our managing legal experts</p>
+    </div>
+  </section>
 
-    <section class="page-title-hero position-relative text-white d-flex align-items-end" style="background: url('./images/books.jpg') no-repeat center center/cover; min-height: 360px;">
-      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-      <div class="container position-relative py-5">
-        <h1 class="display-4 fw-normal mb-2">Team Member</h1>
-        <p class="fs-5 text-white-50 mb-0">Detailed information about one of our managing legal experts</p>
-      </div>
-    </section>
-    <!-- 2nd section პროფილის ფოტო და აღწერა       -->
-    <section class="py-5 bg-white">
-      <div class="container py-3">
-        <div class="row g-5">
-          <div class="col-md-5">
-            <div class="position-relative">
-              <img src="./images/team member-1.jpg" class="w-100 shadow-sm" alt="Oliver Barnett">
-              <div class="position-absolute bg-white text-center p-4 shadow-sm border-start border-warning border-4"
-                   style="bottom: 30px; right: -15px; width: 170px;">
-                <div class="display-6 text-warning fw-bold mb-0">75%</div>
-                <div class="small text-uppercase text-muted fw-bold">Cases Won</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h2 class="fw-normal mb-0">Oliver Barnett</h2>
-              <div class="d-flex gap-3">
-                <a href="#" class="text-muted"><i class="bi bi-facebook fs-5"></i></a>
-                <a href="#" class="text-muted"><i class="bi bi-youtube fs-5"></i></a>
-                <a href="#" class="text-muted"><i class="bi bi-twitter fs-5"></i></a>
-              </div>
-            </div>
-            <p class="text-muted leading-relaxed">
-              Oliver is a senior managing partner specializing in complex commercial litigation and family law matters. With over a decade of trial experience, he leads high-stakes disputes and counsels enterprise clients across California.
-            </p>
-            <div class="bg-light p-4 my-4 border-start border-warning border-3">
-              <div class="mb-2"><span class="text-dark fw-bold me-2">Phone:</span> <a href="tel:8005671234" class="text-muted text-decoration-none">800.567.1234</a></div>
-              <div class="mb-2"><span class="text-dark fw-bold me-2">E-Mail:</span> <a href="mailto:info@demolink.org" class="text-muted text-decoration-none">info@demolink.org</a></div>
-              <div><span class="text-dark fw-bold me-2">Address:</span> <span class="text-muted">355 S Grand Ave, Los Angeles, CA 90071</span></div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 g-3">
-              <div class="col"><a href="cases.html" class="practice-link text-decoration-none text-dark fw-semibold">Admiralty Law</a></div>
-              <div class="col"><a href="cases.html" class="practice-link text-decoration-none text-dark fw-semibold">Civil Rights Law</a></div>
-              <div class="col"><a href="cases.html" class="practice-link text-decoration-none text-dark fw-semibold">Bankruptcy Law</a></div>
-              <div class="col"><a href="cases.html" class="practice-link text-decoration-none text-dark fw-semibold">Criminal Law</a></div>
-              <div class="col"><a href="cases.html" class="practice-link text-decoration-none text-dark fw-semibold">Business Law</a></div>
-              <div class="col"><a href="cases.html" class="practice-link text-decoration-none text-dark fw-semibold">Entertainment Law</a></div>
+  <!--Profile -->
+  <section class="member-profile-section">
+    <div class="container py-3">
+      <div class="row g-5">
+        
+        <!-- ფოტო და პატარა უჯრა -->
+        <div class="col-md-5">
+          <div class="member-img-box">
+            <img src="./images/team member-1.jpg" class="member-img" alt="Oliver Barnett">
+            <div class="member-badge">
+              <div class="member-badge-num">75%</div>
+              <div class="member-badge-label">Cases Won</div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- 3rd section გამოცდილებ        -->
-    <section class="bg-light py-5">
-      <div class="container py-3">
-        <div class="row align-items-center mb-4">
-          <div class="col-md-6">
-            <h2 class="fw-normal mb-0">Personal Experience</h2>
+        <!-- მარჯვენა მხარე, დეტალები -->
+        <div class="col-md-7">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <h2 class="member-name">Oliver Barnett</h2>
+            <div class="member-socials">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            </div>
           </div>
-          <div class="col-md-6 text-md-end">
-            <span class="text-warning fw-bold text-uppercase small">10+ Years of Professional Experience</span>
-          </div>
-        </div>
-        <hr class="border-secondary opacity-25">
 
-        <div class="row mt-4 g-4">
-          <div class="col-md-6">
-            <p class="text-muted leading-relaxed">
-              Throughout his legal career, Oliver has successfully represented hundreds of clients in complex corporate disputes, negotiation settlements, and courtroom litigation. His strategic insight consistently minimizes risks while delivering effective results.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <p class="text-muted leading-relaxed">
-              He serves as trusted counsel to mid-sized businesses, individuals, and institutional clients. His deep expertise in California state and federal court procedures provides clients with a decisive litigation advantage.
-            </p>
-          </div>
-        </div>
-
-        <!-- ფრაზა -->
-        <blockquote class="border-start border-warning border-4 ps-4 my-5 py-2">
-          <p class="fst-italic fs-4 mb-2 text-dark">
-            <span class="text-warning fs-1 lh-1 me-1">&ldquo;</span>Our team's legal strategy is built on complete transparency, exhaustive case preparation, and an unyielding commitment to securing the optimal verdict for every client.
+          <p class="member-bio">
+            Oliver is a senior managing partner specializing in complex commercial litigation and family law matters. With over a decade of trial experience, he leads high-stakes disputes and counsels enterprise clients across California.
           </p>
-          <footer class="text-warning fw-bold fst-normal">Edward Gray, Managing Partner</footer>
-        </blockquote>
-
-        <a href="contact.html" class="btn btn-outline-dark rounded-0 fw-bold text-uppercase px-4 py-3">
-          Free Consultation
-        </a>
-      </div>
-    </section>
-
-<!-- 4tg section სქილები -->
-    <section class="py-5 bg-white">
-      <div class="container py-3">
-        <div class="row g-5">
-          <div class="col-md-6">
-            <h2 class="fw-normal mb-4">Honors &amp; Achievements</h2>
-            <p class="text-muted leading-relaxed mb-4">
-              Oliver's legal acumen has been recognized consistently across state and national legal associations:
-            </p>
-            <ol class="text-muted ps-3 leading-relaxed">
-              <li class="mb-3">Super Lawyers' Top 100 Lawyers in California</li>
-              <li class="mb-3">Trial Lawyer Of The Year (2020)</li>
-              <li class="mb-3">Top 10 US Commercial Litigation Attorneys</li>
-              <li class="mb-3">2020 US Judicial Innovation Award</li>
-            </ol>
+<!-- კონტაქტი -->
+          <div class="member-info-box">
+            <div class="info-item"><span class="info-label">Phone:</span> <a href="tel:8005671234">800.567.1234</a></div>
+            <div class="info-item"><span class="info-label">E-Mail:</span> <a href="mailto:info@demolink.org">info@demolink.org</a></div>
+            <div class="info-item"><span class="info-label">Address:</span> <span>355 S Grand Ave, Los Angeles, CA 90071</span></div>
           </div>
-          <div class="col-md-6">
-            <h2 class="fw-normal mb-4">Personal Skills</h2>
-            <div class="mb-4">
-              <div class="d-flex justify-content-between mb-1">
-                <span class="fw-semibold">Business Law</span>
-                <span class="text-warning fw-bold">88%</span>
-              </div>
-              <div class="progress rounded-0" style="height: 6px;">
-                <div class="progress-bar bg-warning" style="width: 88%;"></div>
-              </div>
-            </div>
-            <div class="mb-4">
-              <div class="d-flex justify-content-between mb-1">
-                <span class="fw-semibold">Personal Injury</span>
-                <span class="text-warning fw-bold">70%</span>
-              </div>
-              <div class="progress rounded-0" style="height: 6px;">
-                <div class="progress-bar bg-warning" style="width: 70%;"></div>
-              </div>
-            </div>
-            <div class="mb-4">
-              <div class="d-flex justify-content-between mb-1">
-                <span class="fw-semibold">Employment Law</span>
-                <span class="text-warning fw-bold">74%</span>
-              </div>
-              <div class="progress rounded-0" style="height: 6px;">
-                <div class="progress-bar bg-warning" style="width: 74%;"></div>
-              </div>
-            </div>
-            <div class="mb-4">
-              <div class="d-flex justify-content-between mb-1">
-                <span class="fw-semibold">Business Litigation</span>
-                <span class="text-warning fw-bold">68%</span>
-              </div>
-              <div class="progress rounded-0" style="height: 6px;">
-                <div class="progress-bar bg-warning" style="width: 68%;"></div>
-              </div>
-            </div>
+<!-- მიმართულებები -->
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+            <div class="col"><a href="cases.html" class="practice-grid-link">Admiralty Law</a></div>
+            <div class="col"><a href="cases.html" class="practice-grid-link">Civil Rights Law</a></div>
+            <div class="col"><a href="cases.html" class="practice-grid-link">Bankruptcy Law</a></div>
+            <div class="col"><a href="cases.html" class="practice-grid-link">Criminal Law</a></div>
+            <div class="col"><a href="cases.html" class="practice-grid-link">Business Law</a></div>
+            <div class="col"><a href="cases.html" class="practice-grid-link">Entertainment Law</a></div>
           </div>
         </div>
-      </div>
-    </section>
 
-<!-- 5th section სარეგისტრაციო ფორმა -->
-    <section class="consultation-section">
-  <div class="consultation-container">
-    <div class="row align-items-center mb-5">
-      <div class="col-lg-6 mb-3 mb-lg-0">
-        <h2 class="consultation-title">Schedule a Free Consultation</h2>
-        <div class="consultation-gold-line"></div>
-      </div>
-      <div class="col-lg-6">
-        <p class="consultation-subtitle">Excellent legal assistance without stress</p>
       </div>
     </div>
-    <form class="row g-3" novalidate>
-      <div class="col-md-3">
-        <input type="text" class="form-control consultation-input" placeholder="Your Name*" required>
+  </section>
+
+  <!-- 4. Personal Experience & Quote -->
+  <section class="member-experience-section">
+    <div class="container py-3">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+          <h2 class="experience-title">Personal Experience</h2>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <span class="experience-years-badge">10+ Years of Professional Experience</span>
+        </div>
       </div>
-      <div class="col-md-3">
-        <input type="email" class="form-control consultation-input" placeholder="Your E-mail*" required>
+
+      <div class="section-divider mb-4"></div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <p class="experience-desc">
+            Throughout his legal career, Oliver has successfully represented hundreds of clients in complex corporate disputes, negotiation settlements, and courtroom litigation. His strategic insight consistently minimizes risks while delivering effective results.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="experience-desc">
+            He serves as trusted counsel to mid-sized businesses, individuals, and institutional clients. His deep expertise in California state and federal court procedures provides clients with a decisive litigation advantage.
+          </p>
+        </div>
       </div>
-      <div class="col-md-3">
-        <input type="tel" class="form-control consultation-input" placeholder="Your Phone*" required>
-      </div>
-      <div class="col-md-3">
-        <button type="submit" class="btn consultation-btn w-100">MAKE AN APPOINTMENT</button>
-      </div>
-    </form>
-  </div>
-</section>
-<!-- 6th sectionქეისები კარუსელი -->
-    <section class="case-studies-section py-5">
-  <div class="case-studies-container">
-    <div class="row align-items-start mb-5">
-      <div class="col-md-5">
-        <h2 class="section-title mb-2">Recent Case Studies</h2>
-        <div class="section-gold-line"></div>
-      </div>
-      <div class="col-md-7">
-        <p class="section-description mb-0">
-          From business law to international legal issues, our team has worked on a variety of cases in different fields. Here are the latest ones.
+
+      <blockquote class="member-quote">
+        <p class="member-quote-text">
+          &ldquo;Our team's legal strategy is built on complete transparency, exhaustive case preparation, and an unyielding commitment to securing the optimal verdict for every client.&rdquo;
         </p>
+        <footer class="member-quote-author">Edward Gray, Managing Partner</footer>
+      </blockquote>
+
+      <a href="contact.html" class="btn btn-outline-dark rounded-0 fw-bold text-uppercase px-4 py-3 btn-consultation-outline">
+        Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. Honors & Personal Skills -->
+  <section class="member-skills-section">
+    <div class="container py-3">
+      <div class="row g-5">
+        
+        <!-- Honors -->
+        <div class="col-md-6">
+          <h2 class="skills-heading">Honors &amp; Achievements</h2>
+          <p class="skills-intro">
+            Oliver's legal acumen has been recognized consistently across state and national legal associations:
+          </p>
+          <ol class="honors-list">
+            <li>Super Lawyers' Top 100 Lawyers in California</li>
+            <li>Trial Lawyer Of The Year (2020)</li>
+            <li>Top 10 US Commercial Litigation Attorneys</li>
+            <li>2020 US Judicial Innovation Award</li>
+          </ol>
+        </div>
+
+        <!-- Skills Progress Bars -->
+        <div class="col-md-6">
+          <h2 class="skills-heading">Personal Skills</h2>
+
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-name">Business Law</span>
+              <span class="skill-value">88%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar skill-bar" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-name">Personal Injury</span>
+              <span class="skill-value">70%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar skill-bar" style="width: 70%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-name">Employment Law</span>
+              <span class="skill-value">74%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar skill-bar" style="width: 74%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="skill-name">Business Litigation</span>
+              <span class="skill-value">68%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar skill-bar" style="width: 68%;"></div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
-    <div class="case-studies-carousel owl-carousel owl-theme">
-      <div class="item">
-        <div class="card case-card">
-          <div class="case-img-wrapper">
+  </section>
+
+  <!-- 6. Schedule Consultation Section -->
+  <section class="consultation-section">
+    <div class="consultation-container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+          <h2 class="consultation-title">Schedule a Free Consultation</h2>
+        </div>
+        <div class="col-lg-6">
+          <p class="consultation-subtitle">Excellent legal assistance without stress</p>
+        </div>
+      </div>
+      <form class="row g-3" novalidate>
+        <div class="col-md-3">
+          <input type="text" class="form-control consultation-input" placeholder="Your Name*" required>
+        </div>
+        <div class="col-md-3">
+          <input type="email" class="form-control consultation-input" placeholder="Your E-mail*" required>
+        </div>
+        <div class="col-md-3">
+          <input type="tel" class="form-control consultation-input" placeholder="Your Phone*" required>
+        </div>
+        <div class="col-md-3">
+          <button type="submit" class="btn consultation-btn w-100">MAKE AN APPOINTMENT</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 7. Case Studies Carousel -->
+  <section class="case-studies-section">
+    <div class="case-studies-container">
+      <div class="row align-items-start mb-5">
+        <div class="col-md-5">
+          <h2 class="section-title mb-2">Recent Case Studies</h2>
+        </div>
+        <div class="col-md-7">
+          <p class="section-description mb-0">
+            From business law to international legal issues, our team has worked on a variety of cases in different fields. Here are the latest ones.
+          </p>
+        </div>
+      </div>
+      <div class="case-studies-carousel owl-carousel owl-theme">
+        <div class="item">
+          <div class="card case-card">
             <img src="./images/1st card.jpg" class="card-img-top" alt="Case Study 1">
-          </div>
-          <div class="card-body p-4">
-            <span class="case-category">CIVIL RIGHTS LAW</span>
-            <h5 class="case-title">Illinois Property Rights: Real Estate Protection</h5>
-            <div class="case-date">NOVEMBER 12, 2020</div>
+            <div class="card-body p-4">
+              <span class="case-category">CIVIL RIGHTS LAW</span>
+              <h5 class="case-title">Illinois Property Rights: Real Estate Protection</h5>
+              <div class="case-date">NOVEMBER 12, 2020</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="card case-card">
-          <div class="case-img-wrapper">
+        <div class="item">
+          <div class="card case-card">
             <img src="./images/2nd card.jpg" class="card-img-top" alt="Case Study 2">
-          </div>
-          <div class="card-body p-4">
-            <span class="case-category">ADMIRALTY LAW</span>
-            <h5 class="case-title">Adam Rodriguez &amp; New Wave Expeditions</h5>
-            <div class="case-date">NOVEMBER 12, 2020</div>
+            <div class="card-body p-4">
+              <span class="case-category">ADMIRALTY LAW</span>
+              <h5 class="case-title">Adam Rodriguez &amp; New Wave Expeditions</h5>
+              <div class="case-date">NOVEMBER 12, 2020</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="card case-card">
-          <div class="case-img-wrapper">
+        <div class="item">
+          <div class="card case-card">
             <img src="./images/3rd card.jpg" class="card-img-top" alt="Case Study 3">
-          </div>
-          <div class="card-body p-4">
-            <span class="case-category">INTERNATIONAL LAW</span>
-            <h5 class="case-title">Quad Oil Corp.: The South China Sea Boundary Dispute</h5>
-            <div class="case-date">NOVEMBER 12, 2020</div>
+            <div class="card-body p-4">
+              <span class="case-category">INTERNATIONAL LAW</span>
+              <h5 class="case-title">Quad Oil Corp.: The South China Sea Boundary Dispute</h5>
+              <div class="case-date">NOVEMBER 12, 2020</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="card case-card">
-          <div class="case-img-wrapper">
+        <div class="item">
+          <div class="card case-card">
             <img src="./images/4th card.jpg" class="card-img-top" alt="Case Study 4">
-          </div>
-          <div class="card-body p-4">
-            <span class="case-category">INTELLECTUAL PROPERTY</span>
-            <h5 class="case-title">Tech Startup Patent Infringement Defense</h5>
-            <div class="case-date">NOVEMBER 12, 2020</div>
+            <div class="card-body p-4">
+              <span class="case-category">INTELLECTUAL PROPERTY</span>
+              <h5 class="case-title">Tech Startup Patent Infringement Defense</h5>
+              <div class="case-date">NOVEMBER 12, 2020</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- footer -->
-    <footer class="bg-dark text-white pt-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-md-3">
-            <a href="index.html" class="d-inline-flex align-items-center text-white text-decoration-none mb-3">
-              <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" height="40">
-            </a>
-            <p class="text-white-50 small">
-              We are a team of highly experienced transactional and litigation attorneys from some of the nation's biggest and most elite law firms.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <h5 class="mb-4">Trending Posts</h5>
-            <div class="mb-3">
-              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">US Sues California Over Immigration Laws</a>
-              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
-              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
-              <span class="text-warning fw-bold small">NEWS</span>
-            </div>
-            <div class="mb-3">
-              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">Hit-and-Run Crash Should Seek Immediate Counsel</a>
-              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
-              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
-              <span class="text-warning fw-bold small">NEWS</span>
-            </div>
-            <div class="mb-3">
-              <a href="blog.html" class="text-white text-decoration-none d-block mb-1">What Does Marijuana Law Mean for You?</a>
-              <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
-              <span class="text-white-50 small">&nbsp;|&nbsp;</span>
-              <span class="text-warning fw-bold small">NEWS</span>
-            </div>
-          </div>
+  </section>
 
-          <!-- Quick Links -->
-          <div class="col-md-4">
-            <h5 class="mb-4">Quick Links</h5>
-            <div class="row">
-              <div class="col-6">
-                <ul class="list-unstyled small">
-                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Admiralty Law</a></li>
-                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Bankruptcy Law</a></li>
-                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Business Law</a></li>
-                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Civil Rights Law</a></li>
-                  <li class="mb-3"><a href="cases.html" class="text-white-50 text-decoration-none">Criminal Law</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="list-unstyled small">
-                  <li class="mb-3"><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
-                  <li class="mb-3"><a href="services.html" class="text-white-50 text-decoration-none">Services</a></li>
-                  <li class="mb-3"><a href="lawyers.html" class="text-white-50 text-decoration-none">Lawyers</a></li>
-                  <li class="mb-3"><a href="contact.html" class="text-white-50 text-decoration-none">Contacts</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <!-- 8. Footer -->
+  <footer class="site-footer text-center">
+    <div class="container">
+      <a href="index.html" class="d-inline-block mb-4">
+        <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services">
+      </a>
+      <ul class="footer-nav">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="#practice">PRACTICE</a></li>
+        <li><a href="lawyers.html">OUR EXPERTS</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="cases.html">CASES</a></li>
+      </ul>
 
-        </div>
+      <div class="footer-divider"></div>
 
-        <hr class="border-secondary mt-4">
+      <p class="footer-call-title">Call us 24/7</p>
+      <h2 class="footer-phone">800.567.1234</h2>
 
-        <div class="d-flex flex-wrap justify-content-between py-3 text-white-50 small">
-          <div>Office: <span class="text-white fw-bold">355 S Grand Ave, Los Angeles, CA 90071</span></div>
-          <div>Tel: <span class="text-white fw-bold">800.567.1234</span></div>
-          <div>E-mail: <a href="mailto:info@demolink.org" class="text-white-50">info@demolink.org</a></div>
-        </div>
-
-        <hr class="border-secondary">
-
-        <div class="d-flex flex-wrap justify-content-between align-items-center py-4">
-          <p class="text-white-50 mb-0 small">© 2026 Umbrella. All rights reserved.</p>
-
-          <div class="d-flex gap-3">
-            <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
-            <a href="#" class="text-white-50"><i class="bi bi-youtube fs-5"></i></a>
-            <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
-          </div>
-        </div>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="social-btn" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
       </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      $(document).ready(function() {
-        $('.case-studies-carousel').owlCarousel({
-          loop: true,
-          margin: 20,
-          nav: true,
-          dots: false,
-          responsive: {
-            0: { items: 1 },
-            600: { items: 2 },
-            1000: { items: 3 }
-          }
-        });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        const siteHeader = document.getElementById("siteHeader");
+      <div class="footer-divider"></div>
 
-        function handleScroll() {
-          if (window.scrollY > 30) {
-            siteHeader.classList.add("scrolled");
-          } else {
-            siteHeader.classList.remove("scrolled");
-          }
-        }
+      <p class="footer-address">355 S Grand Ave, Los Angeles, CA 90071</p>
+      <p class="footer-copyright">
+        &copy; 2026 Umbrella. All rights reserved. <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const sidePanel = document.getElementById('sidePanel');
-        const sidePanelOverlay = document.getElementById('sidePanelOverlay');
-        const hamburgerIcon = document.getElementById('hamburgerIcon');
-        if (hamburgerBtn && sidePanel && sidePanelOverlay) {
-          hamburgerBtn.addEventListener('click', function() {
-            sidePanel.classList.toggle('active');
-            sidePanelOverlay.classList.toggle('active');
-            if (hamburgerIcon) {
-              hamburgerIcon.classList.toggle('bi-list');
-              hamburgerIcon.classList.toggle('bi-x-lg');
-            }
-          });
-          sidePanelOverlay.addEventListener('click', function() {
-            sidePanel.classList.remove('active');
-            sidePanelOverlay.classList.remove('active');
-            if (hamburgerIcon) {
-              hamburgerIcon.classList.add('bi-list');
-              hamburgerIcon.classList.remove('bi-x-lg');
-            }
-          });
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.case-studies-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: false,
+        responsive: {
+          0: { items: 1 },
+          600: { items: 2 },
+          1000: { items: 3 }
         }
       });
-    </script>
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const siteHeader = document.getElementById("siteHeader");
+
+      function handleScroll() {
+        if (window.scrollY > 30) {
+          siteHeader.classList.add("scrolled");
+        } else {
+          siteHeader.classList.remove("scrolled");
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+    });
+  </script>
 </body>
 </html>

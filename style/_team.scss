@@ -1,0 +1,290 @@
+@use 'variables' as *;
+
+//  გუნდის წევრები
+.member-profile-section {
+  padding: 60px 0;
+  background-color: $white;
+}
+
+@media (min-width: 1200px) {
+  .member-profile-section {
+    padding: 80px 0;
+  }
+}
+
+.member-img-box {
+  position: relative;
+}
+
+.member-img {
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.member-badge {
+  position: absolute;
+  bottom: 30px;
+  right: -15px;
+  width: 170px;
+  background-color: $white;
+  text-align: center;
+  padding: 20px 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border-left: 4px solid $gold-color;
+}
+
+.member-badge-num {
+  font-family: Georgia, serif;
+  font-size: 2.25rem;
+  color: $gold-color;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.member-badge-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: #666666;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+// პროფ. მიმართულებების ჩამონათვალი
+a.practice-grid-link {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  color: #2b2b2b !important;
+  text-decoration: none !important;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+// ჰუვერი
+a.practice-grid-link:hover {
+  color: #2b2b2b !important;
+  transform: translateX(20px);
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+}
+
+// ოქროსფერი ისარი
+a.practice-grid-link::before {
+  content: "\2192";
+  position: absolute;
+  left: -20px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: $gold-color;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+a.practice-grid-link:hover::before {
+  opacity: 1;
+}
+// კონტაქტი
+.member-name {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  color: #2b2b2b;
+  font-weight: 400;
+}
+
+.member-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.member-socials a {
+  color: #999999;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.member-socials a:hover {
+  color: $gold-color;
+}
+
+.member-bio {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 25px;
+}
+
+.member-info-box {
+  background-color: #f9fbfd;
+  padding: 24px;
+  margin: 25px 0;
+  border-left: 3px solid $gold-color;
+}
+
+.info-item {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  color: #2b2b2b;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.info-item a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.info-item a:hover {
+  color: $gold-color;
+}
+
+// გამოცდილება
+.member-experience-section {
+  background-color: #f9fbfd;
+  padding: 60px 0;
+}
+
+@media (min-width: 1200px) {
+  .member-experience-section {
+    padding: 90px 0;
+  }
+}
+
+.experience-title {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  color: #2b2b2b;
+  font-weight: 400;
+  margin: 0;
+}
+
+.experience-years-badge {
+  color: $gold-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+
+.section-divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.experience-desc {
+  color: #666666;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.member-quote {
+  border-left: 4px solid $gold-color;
+  padding-left: 25px;
+  margin: 40px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.member-quote-text {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.45;
+  color: #2b2b2b;
+  margin-bottom: 12px;
+}
+
+.member-quote-author {
+  color: $gold-color;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.btn-consultation-outline {
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.btn-consultation-outline:hover {
+  background-color: #2b2b2b;
+  color: $white;
+}
+// სკილები
+.member-skills-section {
+  padding: 60px 0;
+  background-color: $white;
+}
+
+@media (min-width: 1200px) {
+  .member-skills-section {
+    padding: 80px 0;
+  }
+}
+
+.skills-heading {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  color: #2b2b2b;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.skills-intro {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.honors-list {
+  color: #666666;
+  padding-left: 20px;
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.honors-list li {
+  margin-bottom: 12px;
+}
+
+.skill-item {
+  margin-bottom: 22px;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #2b2b2b;
+  font-size: 0.95rem;
+}
+
+.skill-value {
+  color: $gold-color;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.skill-progress {
+  height: 6px;
+  border-radius: 0;
+  background-color: #eef1f5;
+}
+
+.skill-bar {
+  background-color: $gold-color;
+}

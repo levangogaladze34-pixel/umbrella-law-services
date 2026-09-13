@@ -1,230 +1,213 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 .hero-section {
   position: relative;
   height: 700px;
   overflow: hidden;
+} 
 
-  .carousel,
-  .carousel-inner,
-  .carousel-item {
-    height: 100%;
+// კარუსელი
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+// ფოტოები
+.carousel img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-// ვერტიკალურ იდა ჰორიზონტალუირ ხაზები
+// ვერტიკალური და ჰორიზონტალური ხაზები
+.hero-grid-overlay {
+  display: none;
+}
+
+@media (min-width: 1200px) {
   .hero-grid-overlay {
-    display: none;
-
-    @media (min-width: 1200px) {
-      display: grid;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 60px;
-      right: 60px;
-      grid-template-columns: 180px auto 180px;
-      z-index: 2;
-      pointer-events: none;
-
-      .hero-grid-box {
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-
-        &.right-box {
-          border-right: none;
-        }
-      }
-    }
-  }
-
-  .hero-line-top {
+    display: grid;
     position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    z-index: 2;
-  }
-
-  .hero-line-bottom {
-    position: absolute;
-    bottom: 85px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    z-index: 2;
-  }
-  /* რესფონსიულობა                       */
-  .hero-content {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    z-index: 3;
-
-    /* 1. ტელეფონი (< 768px) */
-    left: 20px;
-    right: 20px;
-    max-width: 100%;
-
-    .hero-badge {
-      color: #fff;
-      border-left: 3px solid #e0a940;
-      padding-left: 10px;
-      margin-bottom: 15px;
-      font-size: 0.85rem;
-    }
-
-    .hero-title {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-    }
-
-    /* 2. ტაბლეტი (768px - 1199px) */
-    @media (min-width: 768px) {
-      left: 40px;
-      right: auto;
-      max-width: 550px;
-
-      .hero-badge {
-        font-size: 0.95rem;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-      }
-    }
-
-    /* 3. ლეპტოპი (1200px+) */
-    @media (min-width: 1200px) {
-      left: 240px;
-      max-width: 680px;
-
-      .hero-badge {
-        font-size: 1.05rem;
-      }
-
-      .hero-title {
-        font-size: 3.25rem;
-      }
-    }
-  }
-
-  .hero-bottom-bar {
-    position: absolute;
+    top: 0;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 85px;
-    z-index: 3;
-
-    // Mobile 
-    .address-box {
-      position: absolute;
-      left: 20px;
-      right: 120px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.8rem;
-    }
-
-    .social-box {
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-    }
-
-    /* Tablet (768px+) */
-    @media (min-width: 768px) {
-      .address-box {
-        left: 40px;
-        font-size: 1rem;
-      }
-
-      .social-box {
-        right: 40px;
-      }
-    }
-
-    /* Desktop (1200px+) */
-    @media (min-width: 1200px) {
-      .address-box {
-        left: 240px;
-      }
-
-      .social-box {
-        right: 240px;
-      }
-    }
-  }
-
-  // 01 02 03 ხაზები მაგივრად
-  .carousel .carousel-indicators.custom-num-indicators {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    flex-direction: column;
-    margin: 0;
-    z-index: 4;
-    gap: 12px;
-
-    @media (min-width: 768px) {
-      right: 40px;
-    }
-
-    button {
-      background: transparent;
-      border: none;
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.85rem;
-      padding: 0;
-
-      &.active {
-        color: #e0a940;
-      }
-    }
+    left: 60px;
+    right: 60px;
+    grid-template-columns: 180px auto 180px;
+    z-index: 2;
+    pointer-events: none;
   }
 }
 
+.hero-grid-box {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-.quote-banner-section {
-  background-color: #ffffff;
-  padding: 60px 20px;
+.hero-grid-box.right-box {
+  border-right: none;
+}
 
-  @media (min-width: 768px) {
-    padding: 80px 40px;
+.hero-line-top,
+.hero-line-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.hero-line-top {
+  top: 100px;
+}
+
+.hero-line-bottom {
+  bottom: 85px;
+}
+// სათაური და ტექსტი
+.hero-content {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 3;
+  left: 20px;
+  right: 20px;
+}
+
+.hero-badge {
+  color: $white;
+  border-left: 3px solid $gold-color;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+.hero-title {
+  color: $white;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    left: 40px;
+    right: auto;
+    max-width: 620px;
   }
 
-  @media (min-width: 1200px) {
-    padding: 90px 80px 70px 240px;
+  .hero-badge {
+    font-size: 0.95rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
   }
 }
 
-.custom-quote-box {
-  border-left: 3px solid #e0a940;
-  padding-left: 25px;
+@media (min-width: 1200px) {
+  .hero-content {
+    left: 240px;
+    max-width: 800px;
+  }
+
+  .hero-badge {
+    font-size: 1.05rem;
+  }
+
+  .hero-title {
+    font-size: 3.25rem;
+  }
+}
+.btn-warning {
+  @include custom-button($gold-color, $white, $gold-hover);
+}
+// მისამართი
+.hero-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  z-index: 3;
 }
 
-.quote-text {
-  font-family: serif;
-  font-size: 1.35rem;
-  line-height: 1.45;
-  color: #2b2b2b;
+.address-box {
+  position: absolute;
+  left: 20px;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+}
 
-  @media (min-width: 768px) {
-    font-size: 1.75rem;
+.social-box {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .address-box {
+    left: 40px;
+    font-size: 1rem;
   }
+
+  .social-box {
+    right: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .address-box {
+    left: 240px;
+  }
+
+  .social-box {
+    right: 240px;
+  }
+}
+
+// ციფრები 01 02 03 ხაზების მაგივრად
+.custom-num-indicators {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  left: auto;
+  right: 20px;
+  transform: translateY(-50%);
+  flex-direction: column;
+  margin: 0;
+  z-index: 4;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .custom-num-indicators {
+    right: 40px;
+  }
+}
+
+.custom-num-indicators button {
+  // text-indent: 0 !important;
+  opacity: 1;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  padding: 0;
+  transition: color 0.25s ease;
+}
+
+.custom-num-indicators button:hover,
+.custom-num-indicators button.active {
+  color: $gold-color;
 }

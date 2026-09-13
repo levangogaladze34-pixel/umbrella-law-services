@@ -11,12 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
-</head>
-<body>
-    <!-- heder                        -->
+    <!-- Header -->
     <header class="site-header" id="siteHeader">
       <div class="container-fluid h-100">
-        <div class="d-flex align-items-center justify-content-between h-100 px-3">
+        <div class="d-flex align-items-center justify-content-between h-100">
           <div class="header-group header-brand">
             <a href="index.html" class="d-flex align-items-center text-decoration-none text-white">
               <img src="./images/logo-inverse-285x77.png" alt="Umbrella Law Services" class="header-logo">
@@ -77,36 +75,16 @@
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size: 0.6rem;">1</span>
               </a>
               <a href="contact.html" class="text-white text-decoration-none fw-bold d-none d-lg-inline">GET IN TOUCH</a>
-              <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
-                <i class="bi bi-list" id="hamburgerIcon"></i>
+              <button class="hamburger-btn" aria-label="Toggle menu">
+                <i class="bi bi-list"></i>
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </header>
-    <!-- hamburger menu                  -->
-    <div class="side-panel" id="sidePanel">
-      <div class="side-panel-content">
-        <span class="text-warning fw-bold text-uppercase small">Free Consultation</span>
-        <h2 class="my-3">800.567.1234</h2>
-        <p class="text-white-50 mb-1">info@demolink.org</p>
-        <p class="text-white-50 mb-4">355 S Grand Ave,<br>Los Angeles, CA 90071</p>
-        <a href="contact.html" class="side-panel-link">
-          <i class="bi bi-person-plus"></i> Book an appointment
-        </a>
-        <a href="about.html" class="side-panel-link">
-          <i class="bi bi-bank"></i> Practice Areas
-        </a>
-        <a href="cases.html" class="side-panel-link">
-          <i class="bi bi-balance-scale"></i> Recent Cases
-        </a>
-      </div>
-    </div>
-    <div class="side-panel-overlay" id="sidePanelOverlay"></div>
-    <!-- 1st section სათაური              -->
 
+    <!-- Page Title Hero -->
     <section class="page-title-hero position-relative text-white d-flex align-items-end" style="background: url('./images/books.jpg') no-repeat center center/cover; min-height: 360px;">
       <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
       <div class="container position-relative py-5">
@@ -114,11 +92,10 @@
       </div>
     </section>
 
-    <!-- 2ნდ section ბლოგი             -->
+    <!-- Blog Section -->
     <section class="py-5 bg-white">
       <div class="container py-4">
         <div class="row g-5">
-
           <div class="col-lg-8">
             <article class="mb-5">
               <div class="mb-4 overflow-hidden">
@@ -137,7 +114,7 @@
             </article>
           </div>
 
-          <!-- Rსაძიებე ველი -->
+          <!-- Sidebar -->
           <div class="col-lg-4">
             <div class="mb-5">
               <div class="input-group">
@@ -148,7 +125,7 @@
               </div>
             </div>
 
-            <!-- კატეგორიები--->
+            <!-- Categories -->
             <div class="mb-5">
               <h5 class="fw-normal mb-3" style="font-family: serif; color: #e1ad01; font-size: 1.35rem;">
                 Categories
@@ -181,14 +158,14 @@
               </ul>
             </div>
 
-            <!-- მეილი -->
+            <!-- Newsletter -->
             <div class="mb-5">
               <h5 class="fw-normal mb-3" style="font-family: serif; color: #e1ad01; font-size: 1.35rem;">
                 Newsletter
               </h5>
               <form id="newsletterForm" class="needs-validation" novalidate>
                 <div class="mb-3">
-                  <input type="text" id="newsletterEmail" class="form-control rounded-0 bg-light border-0 py-2 ps-3" placeholder="E-mail" required>
+                  <input type="email" id="newsletterEmail" class="form-control rounded-0 bg-light border-0 py-2 ps-3" placeholder="E-mail" required>
                   <div class="invalid-feedback text-danger small mt-1" id="emailError">
                     Please enter a valid email containing '@'.
                   </div>
@@ -198,13 +175,12 @@
                 </button>
               </form>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
-    <!-- footer                        -->
+
+    <!-- Footer -->
     <footer class="bg-dark text-white pt-5">
       <div class="container">
         <div class="row g-5">
@@ -218,7 +194,6 @@
           </div>
           <div class="col-md-5">
             <h5 class="mb-4">Trending Posts</h5>
-
             <div class="mb-3">
               <a href="blog.html" class="text-white text-decoration-none d-block mb-1">US Sues California Over Immigration Laws</a>
               <span class="text-warning fw-bold small">NOVEMBER 12, 2020</span>
@@ -278,61 +253,11 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<!-- მეილი @ -->
-    <script>
-      document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const emailInput = document.getElementById('newsletterEmail');
-        const emailValue = emailInput.value.trim();
-
-        if (!emailValue.includes('@')) {
-          emailInput.classList.add('is-invalid');
-        } else {
-          emailInput.classList.remove('is-invalid');
-          alert('Subscribed successfully!');
-          emailInput.value = '';
-        }
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        const siteHeader = document.getElementById("siteHeader");
-        function handleScroll() {
-          if (window.scrollY > 30) {
-            siteHeader.classList.add("scrolled");
-          } else {
-            siteHeader.classList.remove("scrolled");
-          }
-        }
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const sidePanel = document.getElementById('sidePanel');
-        const sidePanelOverlay = document.getElementById('sidePanelOverlay');
-        const hamburgerIcon = document.getElementById('hamburgerIcon');
-
-        if (hamburgerBtn && sidePanel && sidePanelOverlay) {
-          hamburgerBtn.addEventListener('click', function() {
-            sidePanel.classList.toggle('active');
-            sidePanelOverlay.classList.toggle('active');
-            if (hamburgerIcon) {
-              hamburgerIcon.classList.toggle('bi-list');
-              hamburgerIcon.classList.toggle('bi-x-lg');
-            }
-          });
-
-          sidePanelOverlay.addEventListener('click', function() {
-            sidePanel.classList.remove('active');
-            sidePanelOverlay.classList.remove('active');
-            if (hamburgerIcon) {
-              hamburgerIcon.classList.add('bi-list');
-              hamburgerIcon.classList.remove('bi-x-lg');
-            }
-          });
-        }
-      });
-    </script>
-
+    <script src="./js/main.js"></script>
 </body>
 </html>

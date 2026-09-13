@@ -2,102 +2,119 @@
 @use 'mixins' as *;
 
 .site-footer {
-  background-color: #222222 !important;
-  padding: 110px 0 80px 0;           
+  background-color: #222222;
+  padding: 60px 0 50px;
   color: $white;
+}
 
-  .footer-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    list-style: none;
-    padding: 0;
-    margin: 30px 0 40px 0;
-    flex-wrap: wrap;
-    a {
-      color: $white;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $gold-color;
-      }
-    }
+@media (min-width: 992px) {
+  .site-footer {
+    padding: 110px 0 80px;
   }
+}
 
-  .footer-divider {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    margin: 40px auto;
-    max-width: 1100px;
-  }
-  .footer-call-title {
-    font-family: serif;
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 8px;
-  }
+// ნავიგაციის ლინკები
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 40px;
+  flex-wrap: wrap;
+}
 
+.footer-nav a {
+  color: $white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: $gold-color;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 40px auto;
+  max-width: 1100px;
+  opacity: 1;
+}
+
+
+.footer-call-title {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 8px;
+}
+
+.footer-phone {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  color: $gold-color; 
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 768px) {
   .footer-phone {
-    font-family: serif;
     font-size: 3.5rem;
-    color: $gold-color; 
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 35px;
   }
+}
 
 
-  .footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 40px;
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
 
-    .social-btn {
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: $white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
 
-      &:hover {
-        border-color: $gold-color;
-        color: $gold-color;
-        background-color: rgba(212, 153, 40, 0.08);
-      }
-    }
-  }
+.social-btn:hover {
+  border-color: $gold-color;
+  color: $gold-color;
+  background-color: rgba(212, 153, 40, 0.08);
+}
 
-  .footer-address {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: $white;
-    margin-bottom: 8px;
-  }
+.footer-address {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $white;
+  margin-bottom: 8px;
+}
 
-  .footer-copyright {
-    font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin: 0;
+.footer-copyright {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
 
-    a {
-      color: rgba(255, 255, 255, 0.5);
-      text-decoration: none;
-      transition: color 0.3s ease;
+.footer-copyright a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-      &:hover {
-        color: $white;
-      }
-    }
-  }
+.footer-copyright a:hover {
+  color: $white;
 }

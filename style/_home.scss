@@ -1,139 +1,130 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+// მეორე სექცია
+@use 'variables' as *;
 
-.btn-warning {
-  @include custom-button($gold-color, $white, $gold-hover);
+.quote-section {
+  padding: 90px 0 60px;
+  background-color: $white;
 }
 
-.quote-banner-section {
-  padding: 90px 0 60px 0;
-  background-color: $white;
+.quote-container {
+  padding-left: 20px;
+  padding-right: 20px;
 
-  .quote-container {
-    padding-left: 240px; /* Snaps text to 1st vertical grid line */
+  @media (min-width: 1200px) {
+    padding-left: 240px;
     padding-right: 80px;
     max-width: 1250px;
   }
+}
 
-  .custom-quote-box {
-    border-left: 3px solid $gold-color;
-    padding-left: 35px;
-  }
+.quote-text {
+  border-left: 3px solid $gold-color;
+  padding-left: 35px;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #2b2b2b;
+  font-weight: 400;
+  margin: 0;
 
-  .quote-text {
-    font-family: serif;
+  @media (min-width: 768px) {
     font-size: 2.2rem;
-    line-height: 1.4;
-    color: #2b2b2b;
-    font-weight: 400;
-    margin: 0;
-  }
-
-  @media (max-width: 991.98px) {
-    .quote-container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
   }
 }
-// მართკუთხედი სექციებს შორის
+// მესამე სექცია
 .practice-section {
   background-color: $white;
   position: relative;
+}
 
- 
-  .practice-img-col {
-    padding: 0;
-  }
+// ფოტო
+.practice-img {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+  display: block;
+}
 
-  .practice-img-wrapper {
-    width: 100%;
-    height: 100%;
+// ჩამონათვალი
+.practice-content-col {
+  background-color: #f9fbfd; 
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+}
 
-    img {
-      width: 100%;
-      height: 100%;
-      min-height: 480px;
-      object-fit: cover;
-      display: block;
-    }
-  }
-
-  
+@media (min-width: 992px) {
   .practice-content-col {
-    background-color: #f9fbfd; 
     padding: 60px 60px 60px 80px;
-    display: flex;
-    align-items: center;
   }
+}
 
-  .practice-content-inner {
-    max-width: 650px;
-    width: 100%;
-  }
-  .practice-title {
-    font-family: serif;
-    font-size: 2.5rem;
-    color: #222222;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }
+.practice-content-inner {
+  max-width: 650px;
+  width: 100%;
+}
 
+.practice-title {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  color: #222222;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
 
-  .practice-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+// სია
+.practice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    li {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+.practice-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
 
-      &:last-child {
-        border-bottom: none;
-      }
+// ჩამონათვალის ჰუვერი
+.practice-list a {
+  display: inline-block;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  color: #2b2b2b;    
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+// ანიმაცია, ტექსტი რომ გაიწიოს და ისარი გამოჩნდეს
+.practice-list a::before {
+  content: "\2192";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $gold-color;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-      a {
-        display: inline-block;
-        font-family: serif;
-        font-size: 1.1rem;
-        color: #2b2b2b;    
-        text-decoration: none;
-        position: relative;
-        transition: transform 0.3s ease, color 0.3s ease;
+.practice-list a:hover {
+  transform: translateX(20px);
+  color: #2b2b2b;
+}
 
-       
-        &::before {
-          content: "\2192"; 
-          position: absolute;
-          left: -20px;
-          top: 50%;
-          transform: translateY(-50%);
-          color: $gold-color;
-          font-family: sans-serif;
-          font-size: 0.95rem;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
+.practice-list a:hover::before {
+  opacity: 1;
+}
 
-    
-        &:hover {
-          transform: translateX(20px);
-          color: #2b2b2b;
-
-          &::before {
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-
-  .dark-rectangle-bar {
-    width: 500px;
-    height: 65px;
-    background-color: #222222;
-  }
+// შავი მართკუთხედი
+.dark-rectangle-bar {
+  width: 500px;
+  height: 65px;
+  background-color: #222222;
 }
 
 // ანიმაციები
@@ -149,424 +140,469 @@
 }
 
 .practice-animate {
-  animation: slideUp 0.8s ease-out forwards;
+  animation: slideUp 0.5s ease-out forwards;
 }
 
-// სტატისტიკა
+//მეოთხე სექცია  სტატისტიკა
 .stats-section {
   background-color: #222222; 
-  padding: 100px 0 140px 0;   
+  padding: 70px 0;
   color: $white;
+}
 
+@media (min-width: 1200px) {
+  .stats-section {
+    padding: 100px 0 140px;
+  }
+}
+
+.stats-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
   .stats-container {
     padding-left: 240px; 
     padding-right: 80px;
     max-width: 1350px;
   }
-  .stats-header {
-    margin-bottom: 45px;
-    .stats-title {
-      font-family: serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: $white;
-      margin-bottom: 15px;
-    }
-    .stats-gold-line {
-      width: 50px;
-      height: 2px;
-      background-color: $gold-color;
-    }
-  }
-
-  
-  .stat-box {
-    border-left: 1px solid rgba(255, 255, 255, 0.15);
-    padding-left: 20px;
-
-    .stat-number {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      font-family: serif;
-      font-size: 3.25rem;
-      font-weight: 400;
-      line-height: 1;
-      color: $white;
-      margin-bottom: 10px;
-
-      i {
-        font-size: 1.5rem;
-        color: $gold-color; 
-      }
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.6);
-      font-weight: 600;
-    }
-  }
+}
 
 
-  @media (max-width: 991.98px) {
-    .stats-container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+.stats-header {
+  margin-bottom: 45px;
+}
+// ოქროსფერი ხაზი სატაურთან
+.stats-title {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: $white;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.stats-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: $gold-color;
+  margin-top: 15px;
+}
+
+// ხაზები სტატისტიკას შორის
+.stat-box {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 20px;
+}
+
+// ციფრობი და აიქონები
+.stat-number {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  color: $white;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .stat-number {
+    font-size: 3.25rem;
   }
 }
 
-// ქეისები
-.case-studies-section {
-  background-color: #ffffff;
-  padding-top: 80px;
-  padding-bottom: 100px;
+.stat-number i {
+  font-size: 1.5rem;
+  color: $gold-color; 
+}
 
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+// ქეისები
+.case-studies-container {
+  padding-left: 20px; 
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
   .case-studies-container {
     padding-left: 240px; 
     padding-right: 80px;
     max-width: 1400px;
   }
-
-  .section-title {
-    font-family: serif;
-    font-size: 2.35rem;
-    color: #2b2b2b;
-    font-weight: 400;
-  }
-
-  .section-gold-line {
-    width: 50px;
-    height: 2px;
-    background-color: $gold-color;
-    margin-top: 10px;
-  }
-
-  .section-description {
-    color: #666666;
-    font-size: 1.05rem;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 991.98px) {
-    .case-studies-container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
 }
+
+
+.section-title {
+  font-family: Georgia, serif;
+  font-size: 2.35rem;
+  color: #2b2b2b;
+  font-weight: 400;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: $gold-color;
+  margin-top: 10px;
+}
+
+.section-description {
+  color: #666666;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
 
 .case-card {
   border: none;
   border-radius: 0;
-  background: #ffffff;
+  background: $white;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.14);
-  }
-  .case-img-wrapper {
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  .case-category {
-    display: inline-block;
-    background-color: #fff8e7; 
-    color: #d49928;           
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    margin-bottom: 16px;
-  }
-  .case-title {
-    font-family: serif;
-    font-size: 1.25rem;
-    color: #2b2b2b;
-    line-height: 1.4;
-    font-weight: 400;
-    margin-bottom: 25px;
-    min-height: 70px; 
-  }
-  .case-date {
-    font-size: 0.72rem;
-    letter-spacing: 1px;
-    color: #999999;
-    text-transform: uppercase;
-    font-weight: 600;
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(56, 55, 55, 0.14);
+}
+
+.case-card .card-img-top {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* 5. Card Inner Details */
+.case-category {
+  display: inline-block;
+  background-color: #fff8e7; 
+  color: $gold-color; 
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  margin-bottom: 16px;
+}
+
+.case-title {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  color: #2b2b2b;
+  line-height: 1.4;
+  font-weight: 400;
+  margin-bottom: 25px;
+  min-height: 70px; 
+}
+
+.case-date {
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  color: #999999;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+// 6th სექცია, ტესტიმონიალს
+.about-testimonials-section {
+  background-color: #f1f5fa;
+  padding: 60px 0 80px;
+}
+
+@media (min-width: 1200px) {
+  .about-testimonials-section {
+    padding: 100px 0 140px;
   }
 }
 
-// გამოცდილება
-.about-testimonials-section {
-  background-color: #f1f5fa!important;
-  padding: 100px 0 140px 0;
+.testimonials-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
+@media (min-width: 1200px) {
   .testimonials-container {
     padding-left: 240px;
     padding-right: 80px;
     max-width: 1400px;
   }
+}
 
-  .testimonials-heading {
-    font-family: serif;
-    font-size: 2.35rem;
-    color: #2b2b2b;
-    font-weight: 400;
-    line-height: 1.35;
+// სათაური და ოქროსფერი ხაზი
+.testimonials-heading {
+  font-family: Georgia, serif;
+  font-size: 2.35rem;
+  color: #2b2b2b;
+  font-weight: 400;
+  line-height: 1.35;
+  position: relative;
+}
+
+.testimonials-heading::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 2px;
+  background-color: $gold-color;
+  margin: 20px 0 25px;
+}
+
+
+.testimonials-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.btn-consultation {
+  border-color: #2b2b2b;
+  color: #2b2b2b;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-consultation:hover {
+  background-color: #2b2b2b;
+  color: $white;
+}
+
+
+.testimonials-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .testimonials-img {
+    height: 480px;
   }
+}
 
+// კარუსელი შავ ფანჯარაში
+.testimonial-overlay-box {
+  background-color: #222222;
+  padding: 30px 25px;
+  border-left: 3px solid $gold-color;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  margin-top: -30px;
+  position: relative;
+  z-index: 5;
+}
 
-  .testimonials-gold-line {
-    width: 45px;
-    height: 2px;
-    background-color: $gold-color;
-    margin: 20px 0 25px 0;
-  }
-
-  .testimonials-desc {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666666 !important;
-  }
-
-  .btn-consultation {
-    border-color: #2b2b2b;
-    color: #2b2b2b;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-
-    &:hover {
-      background-color: #2b2b2b;
-      color: $white;
-    }
-  }
-
-
-  .testimonials-image-wrapper {
-    width: 100%;
-
-    img {
-      width: 100%;
-      height: 480px;
-      object-fit: cover;
-      display: block;
-    }
-  }
-
- 
+@media (min-width: 992px) {
   .testimonial-overlay-box {
     position: absolute;
     bottom: -40px;
-    left: -70px;
+    left: -13px;
     width: 88%;
-    background-color: #222222;
     padding: 35px 40px;
-    border-left: 3px solid $gold-color; /* Left gold border line */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    z-index: 5;
-
-    .testimonial-text {
-      font-family: serif;
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.88);
-      margin-bottom: 25px;
-    }
-
-    .testimonials-client-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .testimonials-client-name {
-      font-family: serif;
-      font-size: 1.05rem;
-      color: $white;
-      font-weight: 400;
-
-      .testimonials-client-title {
-        font-family: sans-serif;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.6);
-        font-weight: 400;
-      }
-    }
-
-   
-    .owl-dots {
-      text-align: right;
-      margin-top: -20px;
-
-      .owl-dot {
-        span {
-          width: 8px;
-          height: 8px;
-          background: transparent;
-          border: 1px solid rgba(255, 255, 255, 0.4);
-          transition: all 0.3s ease;
-        }
-
-        &.active span,
-        &:hover span {
-          background: $gold-color;
-          border-color: $gold-color;
-        }
-      }
-    }
-  }
-
-
-  @media (max-width: 991.98px) {
-    .testimonials-container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    .testimonial-overlay-box {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      margin-top: 20px;
-    }
+    margin-top: 0;
   }
 }
 
+
+.testimonial-text {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 25px;
+}
+
+.testimonials-client-avatar {
+  width: 44px !important;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials-client-name {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  color: $white;
+  font-weight: 400;
+}
+
+.testimonials-client-title {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+// ნავიგაციის წერტილები
+.testimonial-overlay-box .owl-dots {
+  text-align: right;
+  margin-top: -20px;
+}
+
+.testimonial-overlay-box .owl-dot span {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.testimonial-overlay-box .owl-dot.active span,
+.testimonial-overlay-box .owl-dot:hover span {
+  background: $gold-color;
+  border-color: $gold-color;
+}
 
 // გუნდის წევრები
+
 .team-section {
   background-color: #222222;
-  padding: 110px 0 150px 0;
+  padding: 70px 0;
   color: $white;
-  .team-container {
-  margin: 0 auto;
-  padding: 0 30px;
-  max-width: 1300px; 
 }
-  .team-header {
-    margin-bottom: 50px;
 
-    .team-title {
-      font-family: serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: $white;
-      margin: 0;
-    }
-    .team-gold-line {
-      width: 50px;
-      height: 2px;
-      background-color: $gold-color;
-      margin: 15px auto 0 auto;
-    }
+@media (min-width: 1200px) {
+  .team-section {
+    padding: 110px 0 150px;
   }
-  .team-card {
-    border: none;
-    border-radius: 0;
-    position: relative;
-    background: transparent;
-    z-index: 1;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-                box-shadow 0.35s ease, 
-                z-index 0s;
-
-    .team-img-wrapper {
-      width: 100%;
-      height: 440px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-    }
+}
 
 
-    .team-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 30px 20px 20px 20px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      z-index: 2;
-    }
-    .team-name {
-      font-family: serif;
-      font-size: 1.15rem;
-      color: $white;
-      font-weight: 400;
-      margin-bottom: 4px;
-      .team-role {
-        font-family: sans-serif;
-        font-style: italic;
-        font-weight: 300;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.8);
-      }
-    }
+.team-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1300px;
+}
 
-    .team-desc {
-      font-size: 0.82rem;
-      color: rgba(255, 255, 255, 0.7);
-      margin: 0;
-      line-height: 1.4;
-    }
-
-  
-    .team-hover-arrow {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 36px;
-      height: 36px;
-      background-color: $white;
-      color: $gold-color;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      font-weight: bold;
-      z-index: 3;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    &:hover {
-      transform: scale(1.06);
-      z-index: 10;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
-
-      .team-hover-arrow {
-        opacity: 1;
-      }
-    }
+@media (min-width: 768px) {
+  .team-container {
+    padding: 0 30px;
   }
+}
 
-  @media (max-width: 991.98px) {
-    .team-container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
+.team-header {
+  margin-bottom: 50px;
+}
+
+.team-title {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: $white;
+  margin: 0;
+  position: relative;
+}
+
+.team-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: $gold-color;
+  margin: 15px auto 0;
+}
+
+// 7 სექცია გუნდუს წევრების ქარდები
+.team-card {
+  border: none;
+  border-radius: 0;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s ease, 
+              z-index 0s;
+}
+
+/* Replaces .team-img-wrapper div */
+.team-card .card-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* 5. Card Dark Gradient Overlay */
+// .team-overlay {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   padding: 30px 20px 20px;
+//   background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   z-index: 2;
+// }
+
+.team-name {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  color: $white;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.team-desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.4;
+}
+
+// ჰუვერი
+.team-hover-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background-color: $white;
+  color: $gold-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.06);
+  z-index: 10;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+}
+
+.team-card:hover .team-hover-arrow {
+  opacity: 1;
 }
 
 
@@ -631,95 +667,99 @@
     color: #333333;
     line-height: 1.4;
   }
+}
+//9 th sectiton მეილი/კონსულტაცია
 
- 
-  @media (max-width: 991.98px) {
-    .legal-content-box {
-      padding: 40px 25px;
-    }
+.consultation-section {
+  background-color: #333333; 
+  padding: 60px 0 80px;
+  color: $white;
+}
+
+@media (min-width: 1200px) {
+  .consultation-section {
+    padding: 100px 0 120px;
   }
 }
 
 
+.consultation-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-.consultation-section {
-  background-color: #333333; 
-  padding: 100px 0 120px 0;  
-  color: $white;
-
+@media (min-width: 1200px) {
   .consultation-container {
     padding-left: 240px; 
     padding-right: 80px;
     max-width: 1500px;
   }
+}
 
-  .consultation-title {
-    font-family: serif;
-    font-size: 2.35rem;
-    font-weight: 400;
-    color: $white;
-    margin-bottom: 12px;
-  }
+//სათაური
+.consultation-title {
+  font-family: Georgia, serif;
+  font-size: 2.35rem;
+  font-weight: 400;
+  color: $white;
+  margin-bottom: 12px;
+  position: relative;
+}
 
-  .consultation-gold-line {
-    width: 50px;
-    height: 2px;
-    background-color: #f3ca64;
-  }
+/* Replaces .consultation-gold-line div using ::after */
+// .consultation-title::after {
+//   content: "";
+//   display: block;
+//   width: 50px;
+//   height: 2px;
+//   background-color: $gold-color;
+//   margin-top: 12px;
+// }
 
-  .consultation-subtitle {
-    font-family: serif;
-    font-size: 1.35rem;
-    color: rgba(255, 255, 255, 0.65);
-    font-weight: 300;
-    margin: 0;
-  }
+.consultation-subtitle {
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
+  margin: 0;
+}
 
-  
-  .consultation-input {
-    height: 56px;
-    background-color: #f9fbfd; 
-    border: none;
-    border-radius: 0;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #333333;
 
-    &::placeholder {
-      color: #777777;
-      font-size: 0.88rem;
-    }
+.consultation-input {
+  height: 56px;
+  background-color: #f9fbfd; 
+  border: none;
+  border-radius: 0;
+  padding: 0 20px;
+  font-size: 0.9rem;
+  color: #333333;
+}
 
-    &:focus {
-      background-color: #ffffff;
-      box-shadow: none;
-      outline: none;
-    }
-  }
+.consultation-input::placeholder {
+  color: #777777;
+  font-size: 0.88rem;
+}
 
-  
-  .consultation-btn {
-    height: 56px;
-    background-color: #f3ca64; 
-    color: #ffffff;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 0;
-    transition: background-color 0.3s ease;
+.consultation-input:focus {
+  background-color: $white;
+  box-shadow: none;
+  outline: none;
+}
 
-    &:hover {
-      background-color: #e2b952;
-      color: #ffffff;
-    }
-  }
-
-  
-  @media (max-width: 991.98px) {
-    .consultation-container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
+// საბმით ბათონი
+.consultation-btn {
+  height: 56px;
+  background-color: $gold-color; 
+  color: $white;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+}
+// ბათონის ჰუვერი
+.consultation-btn:hover {
+  background-color: darken($gold-color, 5%);
+  color: $white;
 }
